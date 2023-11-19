@@ -33,6 +33,54 @@ public:
 	iconAddBombBrick(point r_uprleft, int r_width, int r_height, game* r_pGame);
 	virtual void onClick();
 };
+////////////////////////////////////////////////////  class iconSave   //////////////////////////////////////////////
+class iconSave :public toolbarIcon
+{
+public:
+	iconSave(point r_uprleft, int r_width, int r_height, game* r_pGame);
+	virtual void onClick();
+};
+////////////////////////////////////////////////////  class iconLoad   //////////////////////////////////////////////
+class iconLoad :public toolbarIcon
+{
+public:
+	iconLoad(point r_uprleft, int r_width, int r_height, game* r_pGame);
+	virtual void onClick();
+};
+////////////////////////////////////////////////////  class iconPlay   //////////////////////////////////////////////
+class iconPlay :public toolbarIcon
+{
+public:
+ 
+	class iconDesignMode :public toolbarIcon   // icon to change mode to design mode
+	{
+	public:
+		iconDesignMode(point r_uprleft, int r_width, int r_height, game* r_pGame);
+		virtual void onClick();
+
+	};
+	class iconPause :public toolbarIcon   // icon to Puase the game
+	{
+	public:
+		iconPause(point r_uprleft, int r_width, int r_height, game* r_pGame);
+		virtual void onClick();
+
+	};
+	class iconContinue :public toolbarIcon   // icon to Continue the game
+	{
+	public:
+		iconContinue(point r_uprleft, int r_width, int r_height, game* r_pGame);
+		virtual void onClick();
+
+	};
+	class iconReset :public toolbarIcon   // icon to Reset the game
+	{
+	public:
+		iconReset(point r_uprleft, int r_width, int r_height, game* r_pGame);
+		virtual void onClick();
+	};
+
+};
 ////////////////////////////////////////////////////  class iconExit   //////////////////////////////////////////////
 class iconExit :public toolbarIcon
 {

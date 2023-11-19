@@ -64,6 +64,52 @@ void iconExit::onClick()
 	//TO DO: add code for cleanup and game exit here
 }
 
+////////////////////////////////////////////////////  class iconSave   //////////////////////////////////////////////
+iconSave::iconSave(point r_uprleft, int r_width, int r_height, game* r_pGame):
+ toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
+{}
+
+void iconSave::onClick()
+{
+	//TO DO: add code for save current design 
+}
+////////////////////////////////////////////////////  class iconLoad   //////////////////////////////////////////////
+iconLoad::iconLoad(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+	toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
+{}
+
+void iconLoad::onClick()
+{
+	//TO DO: add code for loading a design 
+}
+////////////////////////////////////////////////////  classes under class play   //////////////////////////////////////////////
+////////////////////////////////////////////////////  class iconDesignMode   //////////////////////////////////////////////
+iconPlay::iconDesignMode::iconDesignMode(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+	toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
+{}
+
+void iconPlay::iconDesignMode::onClick()
+{
+	//TO DO: add code for transfering to design mode 
+}
+////////////////////////////////////////////////////  class iconPause   //////////////////////////////////////////////
+iconPlay::iconPause::iconPause(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+	toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
+{}
+
+void iconPlay::iconPause::onClick()
+{
+	//TO DO: add code for pause game
+}
+////////////////////////////////////////////////////  class iconReset   //////////////////////////////////////////////
+iconPlay::iconReset::iconReset(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+	toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
+{}
+
+void iconPlay::iconReset::onClick()
+{
+	//TO DO: add code to reset all game and levels 
+}
 
 ////////////////////////////////////////////////////  class toolbar   //////////////////////////////////////////////
 toolbar::toolbar(point r_uprleft, int wdth, int hght, game* pG):
