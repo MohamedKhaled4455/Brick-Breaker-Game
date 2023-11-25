@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
   <Class Name="drawable" Collapsed="true">
-    <Position X="21.75" Y="1.25" Width="1.5" />
+    <Position X="21.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAACAAAAAAAAAQAQAIAAAAEAAAAAAAAAAAAAKAAAAA=</HashCode>
       <FileName>drawable.h</FileName>
@@ -15,7 +15,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="grid" Collapsed="true">
-    <Position X="7.5" Y="2.5" Width="1.5" />
+    <Position X="8.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAABIAAAAAAAJBAAAAACCAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>grid.h</FileName>
@@ -39,7 +39,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="toolbarIcon" Collapsed="true">
-    <Position X="27.25" Y="2.5" Width="1.75" />
+    <Position X="27" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAA=</HashCode>
       <FileName>toolbar.h</FileName>
@@ -53,7 +53,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="toolbar" Collapsed="true">
-    <Position X="36" Y="2.5" Width="1.25" />
+    <Position X="31.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAEAAAAAAAAAAAIAAAAAAAAAAggAAAIQACAAAAA=</HashCode>
       <FileName>toolbar.h</FileName>
@@ -63,19 +63,26 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="game" Collapsed="true">
-    <Position X="21.5" Y="2.5" Width="1.75" />
+    <Position X="21.5" Y="2.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="game::MODE" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>game.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AEAAAAAAAAQAhAAQAAAQAABAAAAAAAAIBAAIAAIAgAI=</HashCode>
+      <HashCode>AEAACAAAAAQAhgAQAAAQAABAIAQAAAAIBAAIAAIAgAI=</HashCode>
       <FileName>game.h</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="pWind" />
-      <Field Name="gameToolbar" />
       <Field Name="bricksGrid" />
+      <Field Name="gameToolbar" />
     </ShowAsAssociation>
   </Class>
   <Class Name="window" Collapsed="true">
-    <Position X="18.5" Y="2.5" Width="1.75" />
+    <Position X="18.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>lJITjJAVABAAoEAUADQAkCDGASAH6FKIAEtkaGIGQME=</HashCode>
       <FileName>CMUgraphicsLib\CMUgraphics.h</FileName>
@@ -96,35 +103,35 @@
     </TypeIdentifier>
   </Class>
   <Class Name="iconAddNormalBrick" Collapsed="true">
-    <Position X="31.25" Y="4" Width="1.75" />
+    <Position X="30.5" Y="4" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAA=</HashCode>
       <FileName>toolbar.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iconAddHardBrick" Collapsed="true">
-    <Position X="26.75" Y="4" Width="1.5" />
+    <Position X="26" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>toolbar.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iconExit" Collapsed="true">
-    <Position X="29" Y="4" Width="1.5" />
+    <Position X="28.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>toolbar.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iconLoad" Collapsed="true">
-    <Position X="33.75" Y="4" Width="1.5" />
+    <Position X="33" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>toolbar.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iconPlay">
-    <Position X="23.5" Y="4" Width="2.5" />
+    <Position X="23.5" Y="4" Width="1.75" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
@@ -140,6 +147,16 @@
         </TypeIdentifier>
       </Class>
       <Class Name="iconPlay::iconContinue" Collapsed="true">
+        <InheritanceLine Type="toolbarIcon" ManuallyRouted="true">
+          <Path>
+            <Point X="27.75" Y="3.191" />
+            <Point X="27.75" Y="3.625" />
+            <Point X="25.819" Y="3.625" />
+            <Point X="25.819" Y="4.56" />
+            <Point X="24.425" Y="4.56" />
+            <Point X="24.425" Y="5.021" />
+          </Path>
+        </InheritanceLine>
         <TypeIdentifier>
           <NewMemberFileName>toolbar.h</NewMemberFileName>
         </TypeIdentifier>
@@ -156,21 +173,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="iconSave" Collapsed="true">
-    <Position X="34.5" Y="4.5" Width="1.5" />
+    <Position X="35" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>toolbar.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ball" Collapsed="true">
-    <Position X="15" Y="4" Width="1.5" />
+    <Position X="16.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ball.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="paddle" Collapsed="true">
-    <Position X="17" Y="4" Width="1.5" />
+    <Position X="18.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
       <FileName>paddle.h</FileName>
