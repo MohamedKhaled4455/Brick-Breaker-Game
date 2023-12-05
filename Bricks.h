@@ -24,7 +24,7 @@ public:
 ////////////////////////////////////////////////////  class normalBrick  /////////////////////////////////
 class normalBrick :public brick
 {
-public:
+public:                                                        
 	normalBrick(point r_uprleft, int r_width, int r_height, game* r_pGame);
 	void collisionAction();
 };
@@ -33,6 +33,9 @@ public:
 ////////////////////////////////////////////////////  class hardBrick  /////////////////////////////////
 class hardBrick :public brick
 {
+private:
+	int strength ;
+	
 public:
 	hardBrick(point r_uprleft, int r_width, int r_height, game* r_pGame);
 	void collisionAction();

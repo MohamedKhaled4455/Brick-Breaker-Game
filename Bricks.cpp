@@ -17,6 +17,8 @@ normalBrick::normalBrick(point r_uprleft, int r_width, int r_height, game* r_pGa
 void normalBrick::collisionAction()
 {
 	//TODO: Add collision action logic
+	// hide at the first action
+    // update score by  game* r_pGame
 }
 
 
@@ -24,12 +26,14 @@ void normalBrick::collisionAction()
 hardBrick::hardBrick(point r_uprleft, int r_width, int r_height, game* r_pGame) :
 	brick(r_uprleft, r_width, r_height, r_pGame)
 {
+	strength = 0;
 	imageName = "images\\bricks\\hardbricks.jpg";
 }
 
 void hardBrick::collisionAction()
 {
 	//TODO: Add collision action logic
+	// update strength + score
 }
 
 ////////////////////////////////////////////////////  class bombBrick  /////////////////////////////////

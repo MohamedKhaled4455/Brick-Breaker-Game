@@ -101,6 +101,15 @@ void iconPlay::iconPause::onClick()
 {
 	//TO DO: add code for pause game
 }
+////////////////////////////////////////////////////  class iconContinue   //////////////////////////////////////////////
+iconPlay::iconContinue::iconContinue(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+	toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
+{}
+
+void iconPlay::iconContinue::onClick()
+{
+	//TO DO: add code to reset all game and levels 
+}
 ////////////////////////////////////////////////////  class iconReset   //////////////////////////////////////////////
 iconPlay::iconReset::iconReset(point r_uprleft, int r_width, int r_height, game* r_pGame) :
 	toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
@@ -182,5 +191,3 @@ bool toolbar::handleClick(int x, int y)
 
 
 }
-
-
