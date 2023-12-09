@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
   <Class Name="drawable" Collapsed="true">
-    <Position X="21.5" Y="1.25" Width="1.5" />
+    <Position X="27" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAACAAAAAAAAAQAQAIAAAAEAAAAAAAAAAAAAKAAAAA=</HashCode>
       <FileName>drawable.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="collidable" Collapsed="true">
-    <Position X="14.25" Y="2.5" Width="1.5" />
+    <Position X="15.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAIAAAAAAAAAAAAAA=</HashCode>
       <FileName>collidable.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="grid" Collapsed="true">
-    <Position X="8.75" Y="2.75" Width="1.5" />
+    <Position X="8.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAABIAAAAAAAJBAAAAACCAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>grid.h</FileName>
@@ -25,35 +25,35 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="brick" Collapsed="true">
-    <Position X="12" Y="4" Width="1.5" />
+    <Position X="13.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Bricks.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="normalBrick" Collapsed="true">
-    <Position X="12" Y="5.5" Width="1.5" />
+    <Position X="13.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>Bricks.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="toolbarIcon" Collapsed="true">
-    <Position X="27" Y="2.5" Width="1.5" />
+    <Position X="32.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAA=</HashCode>
       <FileName>toolbar.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iconAddBombBrick" Collapsed="true">
-    <Position X="21" Y="4" Width="1.75" />
+    <Position X="22.25" Y="4" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>toolbar.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="toolbar" Collapsed="true">
-    <Position X="31.75" Y="2.5" Width="1.5" />
+    <Position X="45.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAEAAAAAAAAAAAIAAAAAAAAAAggAAAIQACAAAAA=</HashCode>
       <FileName>toolbar.h</FileName>
@@ -63,134 +63,116 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="game" Collapsed="true">
-    <Position X="21.5" Y="2.5" Width="1.5" />
-    <NestedTypes>
-      <Enum Name="game::MODE" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>game.h</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
+    <Position X="27" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAACAAAAAQAhgAQAAAQAABAIAQAAAAIBAAIAAIAgAI=</HashCode>
       <FileName>game.h</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="pWind" />
-      <Field Name="bricksGrid" />
       <Field Name="gameToolbar" />
+      <Field Name="bricksGrid" />
     </ShowAsAssociation>
   </Class>
   <Class Name="window" Collapsed="true">
-    <Position X="18.5" Y="2.5" Width="1.5" />
+    <Position X="24" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>lJITjJAVABAAoEAUADQAkCDGASAH6FKIAEtkaGIGQME=</HashCode>
       <FileName>CMUgraphicsLib\CMUgraphics.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="bombBrick" Collapsed="true">
-    <Position X="9.75" Y="5.5" Width="1.5" />
+    <Position X="11" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Bricks.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="hardBrick" Collapsed="true">
-    <Position X="14.25" Y="5.5" Width="1.5" />
+    <Position X="15.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAACAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAACAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>Bricks.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iconAddNormalBrick" Collapsed="true">
-    <Position X="30.5" Y="4" Width="1.75" />
+    <Position X="33.75" Y="4" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAA=</HashCode>
       <FileName>toolbar.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iconAddHardBrick" Collapsed="true">
-    <Position X="26" Y="4" Width="1.5" />
+    <Position X="27" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>toolbar.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iconExit" Collapsed="true">
-    <Position X="28.25" Y="4" Width="1.5" />
+    <Position X="31.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>toolbar.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iconLoad" Collapsed="true">
-    <Position X="33" Y="4" Width="1.5" />
+    <Position X="36.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>toolbar.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iconPlay">
-    <Position X="23.5" Y="4" Width="1.75" />
+    <Position X="24.75" Y="4" Width="1.5" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
-    <NestedTypes>
-      <Class Name="iconPlay::iconDesignMode" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>toolbar.h</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-      <Class Name="iconPlay::iconPause" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>toolbar.h</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-      <Class Name="iconPlay::iconContinue" Collapsed="true">
-        <InheritanceLine Type="toolbarIcon" ManuallyRouted="true">
-          <Path>
-            <Point X="27.75" Y="3.191" />
-            <Point X="27.75" Y="3.625" />
-            <Point X="25.819" Y="3.625" />
-            <Point X="25.819" Y="4.56" />
-            <Point X="24.425" Y="4.56" />
-            <Point X="24.425" Y="5.021" />
-          </Path>
-        </InheritanceLine>
-        <TypeIdentifier>
-          <NewMemberFileName>toolbar.h</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-      <Class Name="iconPlay::iconReset" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>toolbar.h</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>toolbar.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="iconSave" Collapsed="true">
-    <Position X="35" Y="4" Width="1.5" />
+    <Position X="40.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>toolbar.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ball" Collapsed="true">
-    <Position X="16.5" Y="4" Width="1.5" />
+    <Position X="17.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ball.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="paddle" Collapsed="true">
-    <Position X="18.75" Y="4" Width="1.5" />
+    <Position X="20" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
       <FileName>paddle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iconContinue" Collapsed="true">
+    <Position X="29.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAA=</HashCode>
+      <FileName>toolbar.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iconPause" Collapsed="true">
+    <Position X="43" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>toolbar.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="iconReset" Collapsed="true">
+    <Position X="38.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>toolbar.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

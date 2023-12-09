@@ -52,34 +52,40 @@ class iconPlay :public toolbarIcon
 {
 public:
  
-	class iconDesignMode :public toolbarIcon   // icon to change mode to design mode
-	{
-	public:
-		iconDesignMode(point r_uprleft, int r_width, int r_height, game* r_pGame);
-		virtual void onClick();
+	iconPlay(point r_uprleft, int r_width, int r_height, game* r_pGame);
+	virtual void onClick();
+	
+};
+////////////////////////////////////////////////////  class iconDesignMode   //////////////////////////////////////////////
+class iconDesignMode :public toolbarIcon   // icon to change mode to design mode
+{
+public:
+	iconDesignMode(point r_uprleft, int r_width, int r_height, game* r_pGame);
+	virtual void onClick();
 
-	};
-	class iconPause :public toolbarIcon   // icon to Puase the game
-	{
-	public:
-		iconPause(point r_uprleft, int r_width, int r_height, game* r_pGame);
-		virtual void onClick();
+};
+////////////////////////////////////////////////////  class iconPause   //////////////////////////////////////////////
+class iconPause :public toolbarIcon   // icon to Puase the game
+{
+public:
+	iconPause(point r_uprleft, int r_width, int r_height, game* r_pGame);
+	virtual void onClick();
 
-	};
-	class iconContinue :public toolbarIcon   // icon to Continue the game
-	{
-	public:
-		iconContinue(point r_uprleft, int r_width, int r_height, game* r_pGame);
-		virtual void onClick();
+};
+////////////////////////////////////////////////////  class iconContinue   //////////////////////////////////////////////
+class iconContinue :public toolbarIcon   // icon to Continue the game
+{
+public:
+	iconContinue(point r_uprleft, int r_width, int r_height, game* r_pGame);
+	virtual void onClick();
 
-	};
-	class iconReset :public toolbarIcon   // icon to Reset the game
-	{
-	public:
-		iconReset(point r_uprleft, int r_width, int r_height, game* r_pGame);
-		virtual void onClick();
-	};
-
+};
+////////////////////////////////////////////////////  class iconReset   //////////////////////////////////////////////
+class iconReset :public toolbarIcon   // icon to Reset the game
+{
+public:
+	iconReset(point r_uprleft, int r_width, int r_height, game* r_pGame);
+	virtual void onClick();
 };
 ////////////////////////////////////////////////////  class iconExit   //////////////////////////////////////////////
 class iconExit :public toolbarIcon
