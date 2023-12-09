@@ -121,6 +121,12 @@
     <ClCompile Include="collidable.cpp">
       <Filter>Base Classes</Filter>
     </ClCompile>
+    <ClCompile Include="ball.cpp">
+      <Filter>Ball Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="paddle.cpp">
+      <Filter>Paddle Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h">
@@ -198,6 +204,12 @@
     <ClInclude Include="collidable.h">
       <Filter>Base Classes</Filter>
     </ClInclude>
+    <ClInclude Include="ball.h">
+      <Filter>Ball Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="paddle.h">
+      <Filter>Paddle Classes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base Classes">
@@ -211,6 +223,12 @@
     </Filter>
     <Filter Include="Bricks Classes">
       <UniqueIdentifier>{5e150dff-8a89-44f3-b58a-731df9cea925}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ball Classes">
+      <UniqueIdentifier>{605942b4-232b-457b-8eed-80bb2506ecc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Paddle Classes">
+      <UniqueIdentifier>{35f77f74-b1e8-4de6-b022-7ed2cac2ee8d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

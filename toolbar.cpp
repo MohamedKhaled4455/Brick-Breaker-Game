@@ -82,31 +82,47 @@ void iconLoad::onClick()
 {
 	//TO DO: add code for loading a design 
 }
-////////////////////////////////////////////////////  classes under class play   //////////////////////////////////////////////
+////////////////////////////////////////////////////   class play   //////////////////////////////////////////////
+ iconPlay::iconPlay(point r_uprleft, int r_width, int r_height, game* r_pGame):
+	 toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
+{
+}
+ void iconPlay::onClick()
+ {
+ }
 ////////////////////////////////////////////////////  class iconDesignMode   //////////////////////////////////////////////
-iconPlay::iconDesignMode::iconDesignMode(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+iconDesignMode::iconDesignMode(point r_uprleft, int r_width, int r_height, game* r_pGame) :
 	toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
 {}
 
-void iconPlay::iconDesignMode::onClick()
+void iconDesignMode::onClick()
 {
 	//TO DO: add code for transfering to design mode 
 }
 ////////////////////////////////////////////////////  class iconPause   //////////////////////////////////////////////
-iconPlay::iconPause::iconPause(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+iconPause::iconPause(point r_uprleft, int r_width, int r_height, game* r_pGame) :
 	toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
 {}
 
-void iconPlay::iconPause::onClick()
+void iconPause::onClick()
 {
 	//TO DO: add code for pause game
 }
-////////////////////////////////////////////////////  class iconReset   //////////////////////////////////////////////
-iconPlay::iconReset::iconReset(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+////////////////////////////////////////////////////  class iconContinue   //////////////////////////////////////////////
+iconContinue::iconContinue(point r_uprleft, int r_width, int r_height, game* r_pGame) :
 	toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
 {}
 
-void iconPlay::iconReset::onClick()
+void iconContinue::onClick()
+{
+	//TO DO: add code to reset all game and levels 
+}
+////////////////////////////////////////////////////  class iconReset   //////////////////////////////////////////////
+iconReset::iconReset(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+	toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
+{}
+
+void iconReset::onClick()
 {
 	//TO DO: add code to reset all game and levels 
 }
