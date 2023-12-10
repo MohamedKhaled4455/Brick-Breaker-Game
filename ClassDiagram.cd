@@ -126,6 +126,7 @@
   <Class Name="iconPlay">
     <Position X="24.75" Y="4" Width="1.5" />
     <Compartments>
+      <Compartment Name="Public" Collapsed="true" />
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
     <TypeIdentifier>
