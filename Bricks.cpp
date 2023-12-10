@@ -19,12 +19,24 @@ void normalBrick::collisionAction()
 	//TODO: Add collision action logic
 }
 
+////////////////////////////////////////////////////  class bombBrick  /////////////////////////////////
+bombBrick::bombBrick(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+	brick(r_uprleft, r_width, r_height, r_pGame)
+{
+	imageName = "images\\bricks\\BombBrick.jpg";
+}
+
+void bombBrick::collisionAction()
+{
+	//TODO: Add collision action logic
+}
+
 
 ////////////////////////////////////////////////////  class hardBrick  /////////////////////////////////
 hardBrick::hardBrick(point r_uprleft, int r_width, int r_height, game* r_pGame) :
 	brick(r_uprleft, r_width, r_height, r_pGame)
 {
-	imageName = "images\\bricks\\NormalBrick.jpg";
+	imageName = "images\\bricks\\HardBrick.jpg";
 }
 
 void hardBrick::collisionAction()
@@ -32,14 +44,3 @@ void hardBrick::collisionAction()
 	//TODO: Add collision action logic
 }
 
-////////////////////////////////////////////////////  class bombBrick  /////////////////////////////////
-bombBrick::bombBrick(point r_uprleft, int r_width, int r_height, game* r_pGame) :
-	brick(r_uprleft, r_width, r_height, r_pGame)
-{
-	imageName = "images\\bricks\\NormalBrick.jpg";
-}
-
-void bombBrick::collisionAction()
-{
-	//TODO: Add collision action logic
-}

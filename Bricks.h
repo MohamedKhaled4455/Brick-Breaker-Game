@@ -6,6 +6,7 @@
 enum BrickType	//add more brick types
 {
 	BRK_NRM,	//Normal Brick
+	BRK_BMB,	//Bomb Brick                       //Added
 	BRK_HRD		//Hard Brick
 
 	//TODO: Add more types
@@ -29,15 +30,6 @@ public:
 	void collisionAction();
 };
 
-
-////////////////////////////////////////////////////  class hardBrick  /////////////////////////////////
-class hardBrick :public brick
-{
-public:
-	hardBrick(point r_uprleft, int r_width, int r_height, game* r_pGame);
-	void collisionAction();
-};
-
 ////////////////////////////////////////////////////  class bombBrick  /////////////////////////////////
 class bombBrick :public brick
 {
@@ -46,5 +38,11 @@ public:
 	void collisionAction();
 };
 
-
+////////////////////////////////////////////////////  class hardBrick  /////////////////////////////////
+class hardBrick :public brick
+{
+public:
+	hardBrick(point r_uprleft, int r_width, int r_height, game* r_pGame);
+	void collisionAction();
+};
 
