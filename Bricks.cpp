@@ -21,6 +21,8 @@ void normalBrick::collisionAction()
 	//TODO: Add collision action logic
 	 // update score
 	//hide the normal brick() 
+	hide_brick_Matrix(grid* pGrid);
+
      
 
      
@@ -60,5 +62,6 @@ bombBrick::bombBrick(point r_uprleft, int r_width, int r_height, game* r_pGame) 
 
 void bombBrick::collisionAction()
 {
-	//TODO: Add collision action logic
+	//update score by +4
+	// hide bomb brick
 }

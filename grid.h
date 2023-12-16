@@ -8,13 +8,15 @@ class game;
 
 class grid:public drawable
 {
-private:
+
 	brick*** brickMatrix;		//2D array of brick pointers
 	int rows, cols;
 public:
 	grid(point r_uprleft, int r_width, int r_height, game* r_pGame);
 	~grid();
 	void draw() const;
+	void hide_brick_Matrix(grid* pGrid);
+
 	int addBrick(BrickType brkType, point clickedPoint);
 };
 
