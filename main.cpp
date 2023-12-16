@@ -5,6 +5,7 @@ void update_score(/* it should take game* r_pGame */) {
      
 }
 
+
 int main()
 {
 
@@ -12,7 +13,7 @@ int main()
 	game Game;
 
 	Game.go();
-
+	
 	
 	return 0;
 }

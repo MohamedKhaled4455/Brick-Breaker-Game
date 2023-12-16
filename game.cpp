@@ -160,6 +160,12 @@ void game::play()
 	go();// enter the second if statement to exit go()// I think it is not must to write go()
 	// because there is a while loop inside go() even when click on play icon
 	
-	// show up ball and paddle
-	// make the ball at the center of the paddle 
+	// when space is clicked, move ball
+	char key;
+	keytype ktype;
+	ktype = pWind->WaitKeyPress(key);
+	if (key == 32)
+	{
+		// move ball
+	}
 }

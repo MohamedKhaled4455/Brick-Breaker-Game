@@ -37,6 +37,13 @@
   </Class>
   <Class Name="toolbar" Collapsed="true">
     <Position X="45.25" Y="2.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="toolbar::ICONS" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>toolbar.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAAEAAAAAAAAAAAIAAAAAAAAAAggAAAIQACAAAAA=</HashCode>
       <FileName>toolbar.h</FileName>
@@ -47,8 +54,15 @@
   </Class>
   <Class Name="game" Collapsed="true">
     <Position X="27" Y="2.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="game::MODE" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>game.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AEAACAAAAAQAhgAQAAAQAABAIAQAAAAIBAAIAAIAgAI=</HashCode>
+      <HashCode>AEAACAAAAAQAhgAQAAAQAABAIASAAAAIBAAIAAIAgAI=</HashCode>
       <FileName>game.h</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -111,14 +125,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ball" Collapsed="true">
-    <Position X="17.75" Y="4" Width="1.5" />
+    <Position X="11" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ball.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="paddle" Collapsed="true">
-    <Position X="20" Y="4" Width="1.5" />
+    <Position X="13.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
       <FileName>paddle.h</FileName>
@@ -145,5 +159,40 @@
       <FileName>toolbar.h</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="brick" Collapsed="true">
+    <Position X="17.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Bricks.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="normalBrick" Collapsed="true">
+    <Position X="20" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Bricks.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hardBrick" Collapsed="true">
+    <Position X="15.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAACAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Bricks.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="bombBrick" Collapsed="true">
+    <Position X="17.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Bricks.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="BrickType" Collapsed="true">
+    <Position X="47.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAABAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Bricks.h</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

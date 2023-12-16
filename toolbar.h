@@ -109,6 +109,8 @@ class toolbar:public drawable
 
 		ICON_EXIT,		//Exit icon
 
+		ICON_PLAY,       // switch to play mode icon
+
 		ICON_COUNT		//no. of menu icons ==> This should be the last line in this enum
 
 	};
