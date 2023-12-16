@@ -15,6 +15,7 @@
 //Main class that coordinates the game operation
 class game
 {
+
 	enum MODE	//Game mode
 	{
 		MODE_DSIGN,	//Desing mode (startup mode)
@@ -25,8 +26,8 @@ class game
 
 	/// Add more members if needed
 	brick br ;  // You have to add 4 arguments for a default constructor with 4 parameters
-	paddle Pa;  // You have to add 4 arguments for a default constructor with 4 parameters
-	ball ba;    // You have to add 4 arguments for a default constructor with 4 parameters
+	paddle* Pa;  // You have to add 4 arguments for a default constructor with 4 parameters
+	ball* ba;    // You have to add 4 arguments for a default constructor with 4 parameters
 	grid gr;    // You have to add 4 arguments for a default constructor with 4 parameters
 
 	window* pWind;	//Pointer to the CMU graphics window
@@ -51,8 +52,9 @@ public:
 
 	void go() const;
 
-	window* getWind() const;		//returns a pointer to the graphics window
+	void play() ; // to switch from design to play mode
 
+	window* getWind() const;		//returns a pointer to the graphics window
 
 
 	grid* getGrid() const;

@@ -86,6 +86,7 @@ window* game::getWind() const		//returns a pointer to the graphics window
 
 
 
+
 string game::getSrting() const
 {
 	string Label;
@@ -130,26 +131,35 @@ void game::go() const
 	
 	do
 	{
-		printMessage("Ready...");
+		if (gameMode == MODE_PLAY) {
+			break;
+		}
 		getMouseClick(x, y);	//Get the coordinates of the user click
 		if (gameMode == MODE_DSIGN)		//Game is in the Desgin mode
 		{
-			//[1] If user clicks on the Toolbar
-			if (y >= 0 && y < config.toolBarHeight)
-			{
-				isExit=gameToolbar->handleClick(x, y);
-			}
+			printMessage("Ready...");
 		}
-		else if (gameMode == MODE_PLAY) {
-
+		//[1] If user clicks on the Toolbar
+		if (y >= 0 && y < config.toolBarHeight)
+		{
+			isExit = gameToolbar->handleClick(x, y);
 		}
+	   
+		
+		
+		
 
 	} while (!isExit);
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////
+// if play icon clicked, call play
 void game::play() 
 {
+	
 	gameMode = MODE_PLAY;
-
+	go();// enter the second if statement to exit go()// I think it is not must to write go()
+	// because there is a while loop inside go() even when click on play icon
+	
+	// show up ball and paddle
+	// make the ball at the center of the paddle 
 }
-// if play icon clicked, call play
