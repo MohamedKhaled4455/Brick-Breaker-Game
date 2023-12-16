@@ -8,9 +8,9 @@ class game;
 
 class grid:public drawable
 {
-	
+protected:
 	brick*** brickMatrix;		//2D array of brick pointers
-
+private:
 	int rows, cols;
 public:
 	grid(point r_uprleft, int r_width, int r_height, game* r_pGame);

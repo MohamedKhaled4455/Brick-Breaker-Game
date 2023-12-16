@@ -1,4 +1,5 @@
 #include "Bricks.h"
+#include "grid.h"
 
 
 ////////////////////////////////////////////////////  class brick  ///////////////////////////////////////
@@ -20,6 +21,8 @@ void normalBrick::collisionAction()
 	//TODO: Add collision action logic
 	 // update score
 	//hide the normal brick()
+     
+
      
 }
 

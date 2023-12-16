@@ -6,7 +6,8 @@
 enum BrickType	//add more brick types
 {
 	BRK_NRM,	//Normal Brick
-	BRK_HRD		//Hard Brick
+	BRK_HRD,		//Hard Brick
+	BRK_BOM         // Bomb brick
 
 	//TODO: Add more types
 };
