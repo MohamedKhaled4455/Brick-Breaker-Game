@@ -140,6 +140,16 @@ void game::go() const
 				isExit=gameToolbar->handleClick(x, y);
 			}
 		}
+		else if (gameMode == MODE_PLAY) {
+
+		}
 
 	} while (!isExit);
 }
+//////////////////////////////////////////////////////////////////////////////////////////////////
+void game::play() 
+{
+	gameMode = MODE_PLAY;
+
+}
+// if play icon clicked, call play

@@ -20,7 +20,7 @@ void normalBrick::collisionAction()
 {
 	//TODO: Add collision action logic
 	 // update score
-	//hide the normal brick()
+	//hide the normal brick() >> in phase 2
      
 
      
