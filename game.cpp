@@ -28,12 +28,25 @@ game::game()
 	
 	//4- Create the Paddle
 	//TODO: Add code to create and draw the paddle
+	point paddleUprleft;
+	paddleUprleft.x = 525;
+	paddleUprleft.y = 510;
+	ppaddle = new paddle(paddleUprleft, 160, 17, this);
+	// for showing the paddle draw function should be after movement function.
+	ppaddle->draw(pWind);
+
 
 	//5- Create the ball
 	//TODO: Add code to create and draw the ball
-	
+	point ballUprleft;
+	ballUprleft.x = paddleUprleft.x + 160 / 2;
+	ballUprleft.y = paddleUprleft.y - 17 / 2;
+	pball = new ball(ballUprleft, 160, 17, this);
+	pball->balldraw(pWind);
 	//6- Create and clear the status bar
 	clearStatusBar();
+	
+	
 }
 
 game::~game()
@@ -41,6 +54,8 @@ game::~game()
 	delete pWind;
 	delete gameToolbar;
 	delete bricksGrid;
+	delete ppaddle;
+	delete pball;
 }
 
 
@@ -173,17 +188,17 @@ void game::play()
 	
 	
 	//// hide bricks icon and their action 
-	gameToolbar->~toolbar();
-	delete gameToolbar;
-	gameToolbar = nullptr;
-	
-	//2 - create and draw the toolbar
-	point toolbarUpperleft;
-	toolbarUpperleft.x = 0;
-	toolbarUpperleft.y = 0;
+	//gameToolbar->~toolbar();
+	//delete gameToolbar;
+	//gameToolbar = nullptr;
+	//
+	////2 - create and draw the toolbar
+	//point toolbarUpperleft;
+	//toolbarUpperleft.x = 0;
+	//toolbarUpperleft.y = 0;
 
-	gameToolbar = new toolbar(toolbarUpperleft, 0, config.toolBarHeight, this, true);
-	gameToolbar->draw();
+	//gameToolbar = new toolbar(toolbarUpperleft, 0, config.toolBarHeight, this, true);
+	//gameToolbar->draw();
 	 //when space is clicked, move ball
 	char key;
 	keytype ktype;
