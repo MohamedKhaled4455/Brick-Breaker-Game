@@ -81,35 +81,7 @@ toolbar::toolbar(point r_uprleft, int wdth, int hght, game* pG):
 	}
 }
 
-toolbar::toolbar(point r_uprleft, int wdth, int hght, game* pG, bool x): 
-	drawable(r_uprleft, wdth, hght, pG)
-{
 
-	height = hght;
-	pGame = pG;
-
-	//First prepare List of images for each icon
-	//To control the order of these images in the menu, reoder them in enum ICONS above	
-	iconsImages[ICON_EXIT] = "images\\ToolbarIcons\\ExitIcon.jpg";
-
-	point p;
-	p.x = 0;
-	p.y = 0;
-
-	iconsList = new toolbarIcon * [ICON_COUNT];
-
-	//For each icon in the tool bar
-	//	1- Create an object setting its upper left corner, width and height
-	
-	iconsList[ICON_EXIT] = new iconExit(p, config.iconWidth, height, pGame);
-
-	//	2-Set its image (from the above images list)
-	for (int i = 0; i < ICON_COUNT; i++)
-	{
-		iconsList[i]->setImageName(iconsImages[i]);
-
-	}
-}
 
 toolbar::~toolbar()
 {
