@@ -166,20 +166,30 @@ void game::play()
 	
 	gameMode = MODE_PLAY;
 
-	//may you need to add this
-	pWind->ChangeTitle("- - - - - - - - - - Brick Breaker (CIE202-project) - - - - - - - - - -");
-	printMessage("play now !");// move ball
 
-	// enter the second if statement to exit go()// I think it is not must to write go()
-	// because there is a while loop inside go() even when click on play icon
+	pWind->ChangeTitle("- - - - - - - - - - Brick Breaker (CIE202-project) - - - - - - - - - -");
+	printMessage("play now !");
+
+
 	
-	// when space is clicked, move ball
+	//// hide bricks icon and their action 
+	gameToolbar->~toolbar();
+	delete gameToolbar;
+	gameToolbar = nullptr;
+	
+	//2 - create and draw the toolbar
+	point toolbarUpperleft;
+	toolbarUpperleft.x = 0;
+	toolbarUpperleft.y = 0;
+
+	gameToolbar = new toolbar(toolbarUpperleft, 0, config.toolBarHeight, this, true);
+	gameToolbar->draw();
+	 //when space is clicked, move ball
 	char key;
 	keytype ktype;
 	ktype = pWind->WaitKeyPress(key);
 	if (key == 32)
 	{
-		// hide bricks icon and their action 
 		// move ball
 		printMessage("implement move ball in this step");
 	}
