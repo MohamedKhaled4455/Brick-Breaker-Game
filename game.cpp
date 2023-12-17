@@ -58,6 +58,17 @@ game::~game()
 	delete pball;
 }
 
+void game::setScore(int s)
+{
+	int score;
+	score += s;
+	pWind->SetPen(config.penColor, 50);
+	pWind->SetFont(24, BOLD, BY_NAME, "Arial");
+	pWind->DrawString(config.windWidth - config.windWidth * 0.193, config.windHeight - config.statusBarHeight + config.windWidth * 0.008, "Scocre: ");
+	pWind->DrawInteger(config.windWidth - config.windWidth * 0.13, config.windHeight - config.statusBarHeight + config.windWidth * 0.008, score);
+
+}
+
 
 clicktype game::getMouseClick(int& x, int& y) const
 {
@@ -206,6 +217,6 @@ void game::play()
 	if (key == 32)
 	{
 		// move ball
-		printMessage("implement move ball in this step");
+		pball->ballMovement_vertically(pWind);
 	}
 }

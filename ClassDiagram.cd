@@ -47,8 +47,15 @@
   </Class>
   <Class Name="game" Collapsed="true">
     <Position X="27" Y="2.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="game::MODE" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>game.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AEAACAAAAAQAhgAQAAAQAABAIASAAAAIBAAIAAIAgAI=</HashCode>
+      <HashCode>AEIAAAAAAAQAhAAQAAAQAABAAACACAAIBAAJAAIAgAI=</HashCode>
       <FileName>game.h</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -81,14 +88,14 @@
   <Class Name="ball" Collapsed="true">
     <Position X="11" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAgAAAAAAAAAAACAAAAAQIAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ball.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="paddle" Collapsed="true">
     <Position X="13.25" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAEAAAAAAIAAAAIAAAAAAAAAAAAAgAAAAA=</HashCode>
       <FileName>paddle.h</FileName>
     </TypeIdentifier>
   </Class>

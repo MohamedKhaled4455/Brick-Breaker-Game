@@ -56,7 +56,6 @@ private:
 
 public:
 	toolbar(point r_uprleft, int r_width, int r_height, game* r_pGame);
-	toolbar(point r_uprleft, int r_width, int r_height, game* r_pGame, bool enter_true_for_play_mode);
 	~toolbar();
     void draw() const;
 	bool handleClick(int x, int y);	//handles clicks on toolbar icons, returns true if exit is clicked
