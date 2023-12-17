@@ -57,6 +57,18 @@ void grid::draw() const
 
 }
 
+void grid::hide_brick_Matrix()
+{
+	for (int i = 0; i < rows; i++)
+		delete[] brickMatrix[i];
+
+	delete[] brickMatrix;
+	brickMatrix = nullptr;
+
+}
+
+
+
 int grid::addBrick(BrickType brkType, point clickedPoint)
 {
 	//TODO:

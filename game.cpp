@@ -86,6 +86,7 @@ window* game::getWind() const		//returns a pointer to the graphics window
 
 
 
+
 string game::getSrting() const
 {
 	string Label;
@@ -130,16 +131,66 @@ void game::go() const
 	
 	do
 	{
-		printMessage("Ready...");
-		getMouseClick(x, y);	//Get the coordinates of the user click
+		
+
+		
+			//Get the coordinates of the user click
 		if (gameMode == MODE_DSIGN)		//Game is in the Desgin mode
 		{
+			printMessage("Ready...");
+			getMouseClick(x, y);
 			//[1] If user clicks on the Toolbar
 			if (y >= 0 && y < config.toolBarHeight)
 			{
-				isExit=gameToolbar->handleClick(x, y);
+				isExit = gameToolbar->handleClick(x, y);
 			}
 		}
+		else if (gameMode == MODE_PLAY) {
+			getMouseClick(x, y);
+			if (y >= 0 && y < config.toolBarHeight)
+			{
+				isExit = gameToolbar->handleClick(x, y);
+			}
+			
+		}
+		
+		
+		
 
 	} while (!isExit);
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// if play icon clicked, call play
+void game::play() 
+{
+	
+	gameMode = MODE_PLAY;
+
+
+	pWind->ChangeTitle("- - - - - - - - - - Brick Breaker (CIE202-project) - - - - - - - - - -");
+	printMessage("play now !");
+
+	
+	
+	//// hide bricks icon and their action 
+	gameToolbar->~toolbar();
+	delete gameToolbar;
+	gameToolbar = nullptr;
+	
+	//2 - create and draw the toolbar
+	point toolbarUpperleft;
+	toolbarUpperleft.x = 0;
+	toolbarUpperleft.y = 0;
+
+	gameToolbar = new toolbar(toolbarUpperleft, 0, config.toolBarHeight, this, true);
+	gameToolbar->draw();
+	 //when space is clicked, move ball
+	char key;
+	keytype ktype;
+	ktype = pWind->WaitKeyPress(key);
+	if (key == 32)
+	{
+		// move ball
+		printMessage("implement move ball in this step");
+	}
 }

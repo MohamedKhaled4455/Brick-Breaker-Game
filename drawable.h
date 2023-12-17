@@ -3,6 +3,7 @@
 using namespace std;
 #include "CMUgraphicsLib\CMUgraphics.h"
 
+
 class game;     //forward declaration
 
 struct point
@@ -19,6 +20,7 @@ protected:
     point uprLft;       //upper left corner of the drawable object
     int width, height;  
     game* pGame;        //pointer to game object
+  
 
 
 public:
