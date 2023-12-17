@@ -14,7 +14,6 @@ void ball::ballMovement_vertically(window* win)
 		win->SetBrush(LAVENDER);
 		win->SetPen(LAVENDER);
 		win->DrawRectangle(0, uprLft.y, (1200), (uprLft.y + height), FILLED);
-		win->UpdateBuffer();
 	     win->UpdateBuffer();
 		Pause(20);
 	}
