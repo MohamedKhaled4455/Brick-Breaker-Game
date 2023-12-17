@@ -26,9 +26,9 @@ void iconAddNormalBrick::onClick()
 	while (t == LEFT_CLICK)
 	{
 		point clicked;
-		clicked.x = x;                          // pGrid >> brickMatri  //*pGrid>>> brickMatrix
+		clicked.x = x;                          
 		clicked.y = y;
-		grid* pGrid = pGame->getGrid();
+	    pGrid = pGame->getGrid();
 		pGrid->addBrick(BRK_NRM, clicked);
 		pGrid->draw();
 		t = pGame->getMouseClick(x, y);

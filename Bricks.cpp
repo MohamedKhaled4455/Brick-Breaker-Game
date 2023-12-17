@@ -1,5 +1,6 @@
 #include "Bricks.h"
-#include "grid.h"
+#include "grid.h" 
+#include "toolbar.h"
 
 
 ////////////////////////////////////////////////////  class brick  ///////////////////////////////////////
@@ -14,6 +15,7 @@ normalBrick::normalBrick(point r_uprleft, int r_width, int r_height, game* r_pGa
 {
 	imageName = "images\\bricks\\NormalBrick.jpg";
 	
+	
 }
 
 void normalBrick::collisionAction()
@@ -21,7 +23,9 @@ void normalBrick::collisionAction()
 	//TODO: Add collision action logic
 	 // update score
 	//hide the normal brick() 
-	hide_brick_Matrix(grid* pGrid);
+	//grid::pGrid.hide_brick_Matrix();
+	pGrid->hide_brick_Matrix(); // pGrid is defined in drawable class. this line deletes brickMatrix found 
+	// in grid.h, so it hide the normal brick
 
      
 

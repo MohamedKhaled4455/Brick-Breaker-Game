@@ -1,74 +1,97 @@
 ﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
   toolbar.cpp
-  paddle.cpp
-  main.cpp
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\collidable.h(6,26): error C2504: 'drawable': base class undefined
+  (compiling source file 'toolbar.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\collidable.h(9,16): error C2061: syntax error: identifier 'point'
+  (compiling source file 'toolbar.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\Bricks.h(20,8): error C2061: syntax error: identifier 'point'
+  (compiling source file 'toolbar.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\Bricks.h(29,14): error C2061: syntax error: identifier 'point'
+  (compiling source file 'toolbar.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\Bricks.h(41,12): error C2061: syntax error: identifier 'point'
+  (compiling source file 'toolbar.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\Bricks.h(49,12): error C2061: syntax error: identifier 'point'
+  (compiling source file 'toolbar.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\grid.h(9,19): error C2504: 'drawable': base class undefined
+  (compiling source file 'toolbar.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\grid.h(15,7): error C2061: syntax error: identifier 'point'
+  (compiling source file 'toolbar.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\grid.h(20,34): error C2061: syntax error: identifier 'point'
+  (compiling source file 'toolbar.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\toolbar.cpp(32,8): error C2660: 'grid::addBrick': function does not take 2 arguments
+  D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\grid.h(20,6):
+  see declaration of 'grid::addBrick'
+  D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\toolbar.cpp(32,8):
+  while trying to match the argument list '(BrickType, point)'
+  
   grid.cpp
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\drawable.h(23,9): error C2143: syntax error: missing ';' before '*'
+  (compiling source file 'grid.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\drawable.h(23,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'grid.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\drawable.h(23,16): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'grid.cpp')
+  
   game.cpp
-  drawable.cpp
-  collidable.cpp
-  windowinput.cpp
-  mousequeue.cpp
-  keyqueue.cpp
-  image.cpp
-D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\CMUgraphicsLib\image.cpp(115,29): warning C4018: '<': signed/unsigned mismatch
-  CMUgraphics.cpp
-D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\CMUgraphicsLib\CMUgraphics.cpp(257,9): warning C4101: 'iX': unreferenced local variable
-D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\CMUgraphicsLib\CMUgraphics.cpp(257,13): warning C4101: 'iY': unreferenced local variable
-D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\CMUgraphicsLib\CMUgraphics.cpp(751,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\CMUgraphicsLib\CMUgraphics.cpp(1164,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\CMUgraphicsLib\CMUgraphics.cpp(1171,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\CMUgraphicsLib\CMUgraphics.cpp(1202,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\CMUgraphicsLib\CMUgraphics.cpp(1210,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\CMUgraphicsLib\CMUgraphics.cpp(1357,23): warning C4018: '>': signed/unsigned mismatch
-  auxil.cpp
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\collidable.h(6,26): error C2504: 'drawable': base class undefined
+  (compiling source file 'game.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\collidable.h(9,16): error C2061: syntax error: identifier 'point'
+  (compiling source file 'game.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\Bricks.h(20,8): error C2061: syntax error: identifier 'point'
+  (compiling source file 'game.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\Bricks.h(29,14): error C2061: syntax error: identifier 'point'
+  (compiling source file 'game.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\Bricks.h(41,12): error C2061: syntax error: identifier 'point'
+  (compiling source file 'game.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\Bricks.h(49,12): error C2061: syntax error: identifier 'point'
+  (compiling source file 'game.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\grid.h(9,19): error C2504: 'drawable': base class undefined
+  (compiling source file 'game.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\grid.h(15,7): error C2061: syntax error: identifier 'point'
+  (compiling source file 'game.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\grid.h(20,34): error C2061: syntax error: identifier 'point'
+  (compiling source file 'game.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\game.cpp(26,23): error C2661: 'grid::grid': no overloaded function takes 4 arguments
+  D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\game.cpp(26,23):
+  while trying to match the argument list '(point, int, int, game *)'
+  
   Bricks.cpp
-  ball.cpp
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\grid.h(9,19): error C2504: 'drawable': base class undefined
+  (compiling source file 'Bricks.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\grid.h(12,7): error C2143: syntax error: missing ';' before '*'
+  (compiling source file 'Bricks.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\grid.h(12,7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'Bricks.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\grid.h(12,22): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'Bricks.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\grid.h(15,7): error C2061: syntax error: identifier 'point'
+  (compiling source file 'Bricks.cpp')
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\grid.h(20,15): error C2061: syntax error: identifier 'BrickType'
+  (compiling source file 'Bricks.cpp')
+  
   Generating Code...
-cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  jutils.c
-  jquant2.c
-  jquant1.c
-  jmemnobs.c
-  jmemmgr.c
-D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\CMUgraphicsLib\jpeg\jmemmgr.c(1103,19): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\CMUgraphicsLib\jpeg\jmemmgr.c(1106,11): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  jidctred.c
-  jidctint.c
-  jidctfst.c
-  jidctflt.c
-  jerror.c
-D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\CMUgraphicsLib\jpeg\jerror.c(169,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\CMUgraphicsLib\jpeg\jerror.c(171,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  jdtrans.c
-  jdsample.c
-  jdpostct.c
-  jdphuff.c
-  jdmerge.c
-  jdmaster.c
-  jdmarker.c
-  jdmainct.c
-  jdinput.c
-  jdhuff.c
-  Generating Code...
-  Compiling...
-  jddctmgr.c
-  jdcolor.c
-  jdcoefct.c
-  jdatasrc.c
-  jdapistd.c
-  jdapimin.c
-  jcparam.c
-  jcomapi.c
-  jpegload.c
-D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\CMUgraphicsLib\jpegload.c(23,12): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  Generating Code...
-ball.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-Bricks.obj : error LNK2005: "struct collisionInfo __cdecl checkCollision(class collidable const *,class collidable const *)" (?checkCollision@@YA?AUcollisionInfo@@PBVcollidable@@0@Z) already defined in ball.obj
-collidable.obj : error LNK2005: "struct collisionInfo __cdecl checkCollision(class collidable const *,class collidable const *)" (?checkCollision@@YA?AUcollisionInfo@@PBVcollidable@@0@Z) already defined in ball.obj
-drawable.obj : error LNK2005: "struct collisionInfo __cdecl checkCollision(class collidable const *,class collidable const *)" (?checkCollision@@YA?AUcollisionInfo@@PBVcollidable@@0@Z) already defined in ball.obj
-game.obj : error LNK2005: "struct collisionInfo __cdecl checkCollision(class collidable const *,class collidable const *)" (?checkCollision@@YA?AUcollisionInfo@@PBVcollidable@@0@Z) already defined in ball.obj
-grid.obj : error LNK2005: "struct collisionInfo __cdecl checkCollision(class collidable const *,class collidable const *)" (?checkCollision@@YA?AUcollisionInfo@@PBVcollidable@@0@Z) already defined in ball.obj
-main.obj : error LNK2005: "struct collisionInfo __cdecl checkCollision(class collidable const *,class collidable const *)" (?checkCollision@@YA?AUcollisionInfo@@PBVcollidable@@0@Z) already defined in ball.obj
-paddle.obj : error LNK2005: "struct collisionInfo __cdecl checkCollision(class collidable const *,class collidable const *)" (?checkCollision@@YA?AUcollisionInfo@@PBVcollidable@@0@Z) already defined in ball.obj
-toolbar.obj : error LNK2005: "struct collisionInfo __cdecl checkCollision(class collidable const *,class collidable const *)" (?checkCollision@@YA?AUcollisionInfo@@PBVcollidable@@0@Z) already defined in ball.obj
-.\Debug\CIE202-project.exe : fatal error LNK1169: one or more multiply defined symbols found
