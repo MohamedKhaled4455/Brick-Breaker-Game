@@ -20,7 +20,3 @@ void drawable::setImageName(string path)
 {
 	imageName = path;
 }
-
-
-
-

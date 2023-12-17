@@ -25,11 +25,10 @@ class game
 	MODE gameMode;
 
 	/// Add more members if needed
-	brick* br ;  // You have to add 4 arguments for a default constructor with 4 parameters
-	paddle* Pa;  // You have to add 4 arguments for a default constructor with 4 parameters
-	ball* ba;    // You have to add 4 arguments for a default constructor with 4 parameters
-	grid* gr;    // You have to add 4 arguments for a default constructor with 4 parameters
+	
 
+	paddle* ppaddle; // Pointer to paddle
+	ball* pball;
 	window* pWind;	//Pointer to the CMU graphics window
 	toolbar* gameToolbar;
 	grid* bricksGrid;

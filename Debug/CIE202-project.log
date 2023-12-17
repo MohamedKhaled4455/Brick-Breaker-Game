@@ -1,3 +1,14 @@
 ﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  drawable.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  toolbar.cpp
+  paddle.cpp
+  main.cpp
+  grid.cpp
   game.cpp
+  collidable.cpp
+  ball.cpp
+  Bricks.cpp
+ball.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
   CIE202-project.vcxproj -> D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\Debug\CIE202-project.exe
