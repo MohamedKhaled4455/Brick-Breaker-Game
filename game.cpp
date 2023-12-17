@@ -170,7 +170,7 @@ void game::play()
 	pWind->ChangeTitle("- - - - - - - - - - Brick Breaker (CIE202-project) - - - - - - - - - -");
 	printMessage("play now !");
 
-
+	
 	
 	//// hide bricks icon and their action 
 	gameToolbar->~toolbar();
