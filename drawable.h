@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 #include "CMUgraphicsLib\CMUgraphics.h"
-#include "grid.h"
+
 
 class game;     //forward declaration
 
@@ -20,7 +20,7 @@ protected:
     point uprLft;       //upper left corner of the drawable object
     int width, height;  
     game* pGame;        //pointer to game object
-    grid* pGrid;
+  
 
 
 public:

@@ -131,20 +131,28 @@ void game::go() const
 	
 	do
 	{
-		if (gameMode == MODE_PLAY) {
-			break;
-		}
-		getMouseClick(x, y);	//Get the coordinates of the user click
+		
+
+		
+			//Get the coordinates of the user click
 		if (gameMode == MODE_DSIGN)		//Game is in the Desgin mode
 		{
 			printMessage("Ready...");
+			getMouseClick(x, y);
+			//[1] If user clicks on the Toolbar
+			if (y >= 0 && y < config.toolBarHeight)
+			{
+				isExit = gameToolbar->handleClick(x, y);
+			}
 		}
-		//[1] If user clicks on the Toolbar
-		if (y >= 0 && y < config.toolBarHeight)
-		{
-			isExit = gameToolbar->handleClick(x, y);
+		else if (gameMode == MODE_PLAY) {
+			getMouseClick(x, y);
+			if (y >= 0 && y < config.toolBarHeight)
+			{
+				isExit = gameToolbar->handleClick(x, y);
+			}
+			
 		}
-	   
 		
 		
 		
@@ -157,7 +165,12 @@ void game::play()
 {
 	
 	gameMode = MODE_PLAY;
-	go();// enter the second if statement to exit go()// I think it is not must to write go()
+
+	//may you need to add this
+	pWind->ChangeTitle("- - - - - - - - - - Brick Breaker (CIE202-project) - - - - - - - - - -");
+	printMessage("play now !");// move ball
+
+	// enter the second if statement to exit go()// I think it is not must to write go()
 	// because there is a while loop inside go() even when click on play icon
 	
 	// when space is clicked, move ball
@@ -166,6 +179,8 @@ void game::play()
 	ktype = pWind->WaitKeyPress(key);
 	if (key == 32)
 	{
+		// hide bricks icon and their action 
 		// move ball
+		printMessage("implement move ball in this step");
 	}
 }
