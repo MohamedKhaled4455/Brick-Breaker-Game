@@ -217,6 +217,6 @@ void game::play()
 	if (key == 32)
 	{
 		// move ball
-		printMessage("implement move ball in this step");
+		pball->ballMovement_vertically(pWind);
 	}
 }
