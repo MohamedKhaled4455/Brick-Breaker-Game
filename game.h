@@ -26,7 +26,7 @@ class game
 
 	/// Add more members if needed
 	
-	normalBrick* n;
+	
 	paddle* ppaddle; // Pointer to paddle
 	ball* pball;
 	window* pWind;	//Pointer to the CMU graphics window

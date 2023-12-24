@@ -60,7 +60,7 @@ void grid::draw() const
 void grid::hide_brick_Matrix()
 {
 	//delete brickMatrix[][];// I want to put i and j of the brick
-	delete brickMatrix;
+	
 }
 
 
