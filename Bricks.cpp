@@ -29,7 +29,16 @@ void normalBrick::collisionAction()
 		pGame->setScore(1);
 
 		//hide the normal brick() 
-	   // grid::pGrid->hide_brick_Matrix();
+	    pGame->getGrid()->hide_brick_Matrix();
+		// fitst question is: is brickMatrix resposible
+		// for the grid it self with i and j coordinates 
+		// or it is resp. for the brick
+
+		// if brickMatrix is resp. for the grid it self,
+		// how can I remove the pointer pWind found in draw() constructor in 
+		// drawable.cpp, so I remove the pointer reposible to draw the brick
+		// or is it a function in window class to reomve rather than draw?
+		delete pGame->getWind();
 
 	}
 

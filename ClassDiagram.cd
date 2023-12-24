@@ -30,13 +30,6 @@
   </Class>
   <Class Name="toolbar" Collapsed="true">
     <Position X="45.25" Y="2.5" Width="1.5" />
-    <NestedTypes>
-      <Enum Name="toolbar::ICONS" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>toolbar.h</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAAEAAAAAAAAAAAIAAAAAAAAAAggAAAIQACAAAAA=</HashCode>
       <FileName>toolbar.h</FileName>
@@ -55,7 +48,7 @@
       </Enum>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AEIAAAAAAAQAhAAQAAAQAABAAACACAAIBAAJAAIAgAI=</HashCode>
+      <HashCode>AEIAAAAAAAQAhAAQAAAQAABAAACACAAIFAAJAAIAgAI=</HashCode>
       <FileName>game.h</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -88,7 +81,7 @@
   <Class Name="ball" Collapsed="true">
     <Position X="11" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAAAAAACAAAAAQIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAgAAAAAAAAAAACAAAAABIAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ball.h</FileName>
     </TypeIdentifier>
   </Class>

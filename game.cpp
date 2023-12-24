@@ -2,6 +2,7 @@
 #include "gameConfig.h"
 
 
+
 game::game()
 {
 	//Initialize playgrond parameters
@@ -179,7 +180,14 @@ void game::go() const
 			}
 			
 		}
-		
+		char key;
+		keytype ktype;
+		ktype = pWind->WaitKeyPress(key);
+		if (key == 32)
+		{
+			// move ball
+			n->collisionAction();
+		}
 		
 		
 
