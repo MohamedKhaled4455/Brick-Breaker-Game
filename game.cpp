@@ -176,6 +176,7 @@ void game::go() const
 			getMouseClick(x, y);
 			if (y >= 0 && y < config.toolBarHeight)
 			{
+
 				isExit = gameToolbar->handleClick(x, y);
 			}
 			

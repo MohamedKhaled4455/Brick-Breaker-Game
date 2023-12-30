@@ -15,7 +15,7 @@
 		grid(point r_uprleft, int r_width, int r_height, game* r_pGame);
 		~grid();
 		void draw() const;
-		void hide_brick_Matrix();
+		void hide_brick_Matrix(point p);
 
 		int addBrick(BrickType brkType, point clickedPoint);
 	};

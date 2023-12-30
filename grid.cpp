@@ -57,9 +57,14 @@ void grid::draw() const
 
 }
 
-void grid::hide_brick_Matrix()
+void grid::hide_brick_Matrix(point p)
 {
-	//delete brickMatrix[][];// I want to put i and j of the brick
+	int r = (p.y - uprLft.y) / config.brickHeight;
+	int c = p.x / config.brickWidth;
+
+	delete brickMatrix[r][c];// I want to put i and j of the brick
+	brickMatrix = nullptr;
+	// add draw rectangle >> insert its points 
 	
 }
 
