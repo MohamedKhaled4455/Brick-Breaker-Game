@@ -1,4 +1,5 @@
 #include "ball.h"
+#include "game.h"
 #include "CMUgraphicsLib\auxil.h"	// where Pause is found
 
 ball::ball(point r_uprleft, int r_width, int r_height, game* r_pGame) :
@@ -6,21 +7,20 @@ ball::ball(point r_uprleft, int r_width, int r_height, game* r_pGame) :
 
 
 
-void ball::ballMovement_vertically(window* win)
+void ball::ballMovement()
 {
-	int ballRadius = 10;
-	
-	do {
-		//ball::balldraw(win);
-		uprLft.y -= 2;
-		win->SetPen(BLACK);
-		win->SetBrush(LIGHTGOLDENRODYELLOW);
-		//win->DrawRectangle(0, uprLft.y, (1200), (uprLft.y + height), FILLED);
-		win->DrawCircle(uprLft.x, uprLft.y, ballRadius, FILLED);
-		win->UpdateBuffer();
-		Pause(10);
-	} while (true);
-	
+
+	window* win = pGame->getWind();
+
+	//ball::balldraw(win);
+	emptyball();
+	uprLft.y += vecy;
+	uprLft.x += vecx;
+	balldraw();
+	win->UpdateBuffer();
+
+
+
 }
 
 void ball::collisionAction()
@@ -28,10 +28,20 @@ void ball::collisionAction()
 
 }
 
-void ball::balldraw(window* win)
+void ball::balldraw()
 {
-int ballRadius = 10;
+	int ballRadius = 10;
+	window* win = pGame->getWind();
 	win->SetPen(BLACK);
 	win->SetBrush(LIGHTGOLDENRODYELLOW);
+	win->DrawCircle(uprLft.x, uprLft.y, ballRadius, FILLED);
+}
+
+void ball::emptyball()
+{
+	int ballRadius = 10;
+	window* win = pGame->getWind();
+	win->SetPen(LAVENDER);
+	win->SetBrush(LAVENDER);
 	win->DrawCircle(uprLft.x, uprLft.y, ballRadius, FILLED);
 }

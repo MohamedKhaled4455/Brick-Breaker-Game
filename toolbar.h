@@ -19,6 +19,13 @@ public:
 	iconAddNormalBrick(point r_uprleft, int r_width, int r_height, game* r_pGame);
 	virtual void onClick();
 };
+////////////////////////////////////////////////////  class iconDeleteBrick   //////////////////////////////////////////////
+class iconDeleteBrick :public toolbarIcon
+{
+public:
+	iconDeleteBrick(point r_uprleft, int r_width, int r_height, game* r_pGame);
+	virtual void onClick();
+};
 
 
 
@@ -41,6 +48,7 @@ class toolbar:public drawable
 		ICON_ADD_NORM,		//add normal brick
 
 		//TODO: Add more icons names here
+		ICON_DELETE_BRICK,
 
 		ICON_EXIT,		//Exit icon
 

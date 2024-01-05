@@ -1,12 +1,1 @@
-﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  main.cpp
-  grid.cpp
-  ball.cpp
-  Bricks.cpp
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  toolbar.cpp
-  paddle.cpp
-  game.cpp
-  drawable.cpp
-LINK : fatal error LNK1104: cannot open file '.\Debug\CIE202-project.exe'
+﻿LINK : fatal error LNK1104: cannot open file '.\Debug\CIE202-project.exe'

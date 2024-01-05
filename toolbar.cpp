@@ -59,6 +59,7 @@ toolbar::toolbar(point r_uprleft, int wdth, int hght, game* pG):
 	//First prepare List of images for each icon
 	//To control the order of these images in the menu, reoder them in enum ICONS above	
 	iconsImages[ICON_ADD_NORM] = "images\\ToolbarIcons\\NormalBrickIcon.jpg";
+	iconsImages[ICON_DELETE_BRICK] = "images\\ToolbarIcons\\DeleteBrickIcon.jpg";
 	iconsImages[ICON_EXIT] = "images\\ToolbarIcons\\ExitIcon.jpg";
 
 	point p;
@@ -123,5 +124,25 @@ bool toolbar::handleClick(int x, int y)
 
 
 }
+////////////////////////////////////////////////////  class iconDeleteBrick   //////////////////////////////////////////////
 
+iconDeleteBrick::iconDeleteBrick(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+	toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
+{
+}
 
+void iconDeleteBrick::onClick()
+{
+	pGame->printMessage("Click on a brick to be deleted  ==> Right-Click to stop <==");
+	int x, y;
+	clicktype t = pGame->getMouseClick(x, y);
+	while (t == LEFT_CLICK)
+	{
+		point clicked;
+		clicked.x = x;
+		clicked.y = y;
+		pGame->getGrid()->hide_brick_Matrix(uprLft);
+		t = pGame->getMouseClick(x, y);
+	}
+	pGame->printMessage("");
+}

@@ -43,7 +43,7 @@ game::game()
 	ballUprleft.x = paddleUprleft.x + 160 / 2;
 	ballUprleft.y = paddleUprleft.y - 17 / 2;
 	pball = new ball(ballUprleft, 160, 17, this);
-	pball->balldraw(pWind);
+	pball->balldraw();
 	//6- Create and clear the status bar
 	clearStatusBar();
 	
@@ -152,7 +152,6 @@ void game::go() const
 	//This function reads the position where the user clicks to determine the desired operation
 	int x, y;
 	bool isExit = false;
-
 	//Change the title
 	pWind->ChangeTitle("- - - - - - - - - - Brick Breaker (CIE202-project) - - - - - - - - - -");
 	
@@ -170,7 +169,10 @@ void game::go() const
 			if (y >= 0 && y < config.toolBarHeight)
 			{
 				isExit = gameToolbar->handleClick(x, y);
+				
+
 			}
+		
 		}
 		else if (gameMode == MODE_PLAY) {
 			getMouseClick(x, y);
@@ -178,6 +180,7 @@ void game::go() const
 			{
 
 				isExit = gameToolbar->handleClick(x, y);
+				pball->ballMovement();
 			}
 			
 		}
@@ -219,6 +222,6 @@ void game::play()
 	if (key == 32)
 	{
 		// move ball
-		pball->ballMovement_vertically(pWind);
+		pball->ballMovement_vertically();
 	}
 }
