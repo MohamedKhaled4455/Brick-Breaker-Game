@@ -30,16 +30,7 @@ void normalBrick::collisionAction()
 
 		//hide the normal brick() 
 	    pGame->getGrid()->hide_brick_Matrix(uprLft);
-		// fitst question is: is brickMatrix resposible
-		// for the grid it self with i and j coordinates 
-		// or it is resp. for the brick
-
-		// if brickMatrix is resp. for the grid it self,
-		// how can I remove the pointer pWind found in draw() constructor in 
-		// drawable.cpp, so I remove the pointer reposible to draw the brick
-		// or is it a function in window class to reomve rather than draw?
-		delete pGame->getWind();
-
+		
 	}
 
 
@@ -76,6 +67,8 @@ void hardBrick::collisionAction()
 
 
 			// hide brick 
+			pGame->getGrid()->hide_brick_Matrix(uprLft);
+
 		}
 	}
 }
@@ -99,5 +92,23 @@ void bombBrick::collisionAction()
 		pGame->getGrid()->hide_bricks_of_bombbrick(uprLft);
 		//update score by +4
 		pGame->setScore(4);
+	}
+}
+////////////////////////////////////////////////////  class rockBrick  /////////////////////////////////
+
+rockBrick::rockBrick(point r_uprleft, int r_width, int r_height, game* r_pGame):
+	brick(r_uprleft, r_width, r_height, r_pGame)
+{
+	imageName = "images\\bricks\\rockbrick.png";
+
+}
+
+void rockBrick::collisionAction()
+{
+	bool checkcollision = true;// just for represnetation
+
+	//TODO: Add collision action logic
+	if (checkcollision == true) { 
+	// nothing will happen, just normal reflection
 	}
 }
