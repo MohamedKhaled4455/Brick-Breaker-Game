@@ -68,6 +68,20 @@ void grid::hide_brick_Matrix(point p)
 	
 }
 
+void grid::hide_bricks_of_bombbrick(point p)
+{
+	int r = (p.y - uprLft.y) / config.brickHeight;
+	int c = p.x / config.brickWidth;
+
+	delete brickMatrix[r+1][c];// right brick
+	delete brickMatrix[r-1][c];// left brick
+	delete brickMatrix[r][c+1];// upper brick
+	delete brickMatrix[r][c-1];// lower brick
+
+	brickMatrix = nullptr;
+	// add draw rectangle >> insert its points 
+}
+
 
 
 int grid::addBrick(BrickType brkType, point clickedPoint)

@@ -16,7 +16,7 @@ void ball::ballMovement_vertically(window* win)
 		win->SetPen(BLACK);
 		win->SetBrush(LIGHTGOLDENRODYELLOW);
 		//win->DrawRectangle(0, uprLft.y, (1200), (uprLft.y + height), FILLED);
-		win->DrawCircle(0, uprLft.y, ballRadius, FILLED);
+		win->DrawCircle(uprLft.x, uprLft.y, ballRadius, FILLED);
 		win->UpdateBuffer();
 		Pause(10);
 	} while (true);
@@ -25,6 +25,7 @@ void ball::ballMovement_vertically(window* win)
 
 void ball::collisionAction()
 {
+
 }
 
 void ball::balldraw(window* win)
