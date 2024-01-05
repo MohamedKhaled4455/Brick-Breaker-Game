@@ -61,7 +61,7 @@ game::~game()
 
 void game::setScore(int s)
 {
-	int score;
+	static int score=0;
 	score += s;
 	pWind->SetPen(config.penColor, 50);
 	pWind->SetFont(24, BOLD, BY_NAME, "Arial");

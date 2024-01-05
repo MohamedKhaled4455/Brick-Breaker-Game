@@ -29,7 +29,7 @@ void normalBrick::collisionAction()
 		pGame->setScore(1);
 
 		//hide the normal brick() 
-	    pGame->getGrid()->hide_brick_Matrix();
+	    pGame->getGrid()->hide_brick_Matrix(uprLft);
 		// fitst question is: is brickMatrix resposible
 		// for the grid it self with i and j coordinates 
 		// or it is resp. for the brick

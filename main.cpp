@@ -11,7 +11,7 @@ int main()
 
 	//Create an object of controller
 	game Game;
-	//Game.play();
+	Game.play();
 	Game.go();
 	
 	
