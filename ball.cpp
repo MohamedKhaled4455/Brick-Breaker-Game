@@ -37,6 +37,7 @@ void ball::ballMovementVertically()
 void ball::collisionAction()
 {
 	// call ballpaddlereflection
+	BallPaddleReflection();
 	// conitune the logic
 }
 
