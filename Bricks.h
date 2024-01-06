@@ -58,6 +58,12 @@ public:
 	rockBrick(point r_uprleft, int r_width, int r_height, game* r_pGame);
 	void collisionAction();
 };
-
+////////////////////////////////////////////////////  class PowerUpDownbricks  /////////////////////////////////
+class PowerUpDownbricks :public brick
+{
+public:
+	PowerUpDownbricks(point r_uprleft, int r_width, int r_height, game* r_pGame);
+	void collisionAction() ;
+};
 
 

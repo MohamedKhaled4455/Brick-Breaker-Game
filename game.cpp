@@ -181,11 +181,21 @@ void game::go() const
 
 				isExit = gameToolbar->handleClick(x, y);
 				pball->ballMovement();
+				// if check collision between ball and paddle true, do feature 20, 
+				collisionInfo BallPaddleCollision = checkCollision(ppaddle, pball);
+				if (BallPaddleCollision.collided) {
+					pball->setcollisionpoint(BallPaddleCollision.midpoint);
+					pball->collisionAction();
+				}
+				
+				// means call collisionaction in ball and make if statment or switch 
+				// to define that the collision is between ball and paddle or ball and brick
+				// then call reflectinon_ball&paddle() that you will build in ball class
 			}
 			
-		}
 	
 		
+		}
 		
 
 	} while (!isExit);
@@ -222,6 +232,6 @@ void game::play()
 	if (key == 32)
 	{
 		// move ball
-		pball->ballMovement_vertically();
+		pball->ballMovementVertically();
 	}
 }

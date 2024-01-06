@@ -1,1 +1,35 @@
-﻿LINK : fatal error LNK1104: cannot open file '.\Debug\CIE202-project.exe'
+﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  game.cpp
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\game.cpp(45,14): error C2259: 'ball': cannot instantiate abstract class
+  D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\ball.h(6,7):
+  see declaration of 'ball'
+  D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\game.cpp(45,14):
+  due to following members:
+  D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\game.cpp(45,14):
+  'void collidable::collisionAction(void)': is abstract
+  D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\collidable.h(18,18):
+  see declaration of 'collidable::collisionAction'
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\game.cpp(45,18): error C2259: 'ball': cannot instantiate abstract class
+  D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\ball.h(6,7):
+  see declaration of 'ball'
+  D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\game.cpp(45,18):
+  due to following members:
+  D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\game.cpp(45,18):
+  'void collidable::collisionAction(void)': is abstract
+  D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\collidable.h(18,18):
+  see declaration of 'collidable::collisionAction'
+  
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\game.cpp(68,108): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\game.cpp(68,37): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\game.cpp(69,108): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\game.cpp(69,38): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+  ball.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  toolbar.cpp
+  paddle.cpp
+  main.cpp
+  grid.cpp
+  drawable.cpp
+  Bricks.cpp

@@ -12,7 +12,6 @@ void ball::ballMovement()
 
 	window* win = pGame->getWind();
 
-	//ball::balldraw(win);
 	emptyball();
 	uprLft.y += vecy;
 	uprLft.x += vecx;
@@ -23,14 +22,33 @@ void ball::ballMovement()
 
 }
 
-void ball::collisionAction()
+void ball::ballMovementVertically()
 {
 
+	window* win = pGame->getWind();
+
+	emptyball();
+	uprLft.y -= vecy;
+	balldraw();
+	win->UpdateBuffer();
 }
+
+void ball::collisionAction()
+{
+	// call ballpaddlereflection
+	// conitune the logic
+}
+
+void ball::setcollisionpoint(point c)
+{
+	collision = c;
+	
+}
+
 
 void ball::balldraw()
 {
-	int ballRadius = 10;
+
 	window* win = pGame->getWind();
 	win->SetPen(BLACK);
 	win->SetBrush(LIGHTGOLDENRODYELLOW);
@@ -39,7 +57,6 @@ void ball::balldraw()
 
 void ball::emptyball()
 {
-	int ballRadius = 10;
 	window* win = pGame->getWind();
 	win->SetPen(LAVENDER);
 	win->SetBrush(LAVENDER);

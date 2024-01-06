@@ -112,3 +112,26 @@ void rockBrick::collisionAction()
 	// nothing will happen, just normal reflection
 	}
 }
+////////////////////////////////////////////////////  class PowerUpDownbricks  /////////////////////////////////
+
+PowerUpDownbricks::PowerUpDownbricks(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+	brick(r_uprleft, r_width, r_height, r_pGame)
+
+{
+	imageName = "images\\bricks\\PowerUpDownbrick.png";
+
+}
+
+void PowerUpDownbricks::collisionAction()
+{
+	bool checkcollision = true;// just for represnetation
+
+	//TODO: Add collision action logic
+	if (checkcollision == true) {
+		// through down one collectable vertically 
+		// hide brick
+		pGame->getGrid()->hide_brick_Matrix(uprLft);
+
+
+	}
+}

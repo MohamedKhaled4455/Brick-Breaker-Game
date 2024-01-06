@@ -141,7 +141,7 @@ void iconDeleteBrick::onClick()
 		point clicked;
 		clicked.x = x;
 		clicked.y = y;
-		pGame->getGrid()->hide_brick_Matrix(uprLft);
+		pGame->getGrid()->hide_brick_Matrix(clicked);
 		t = pGame->getMouseClick(x, y);
 	}
 	pGame->printMessage("");
