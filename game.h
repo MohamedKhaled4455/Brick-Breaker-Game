@@ -56,7 +56,7 @@ public:
 	void play() ; // to switch from design to play mode
 
 	window* getWind() const;		//returns a pointer to the graphics window
-
+	paddle* getpaddle() const;
 
 	grid* getGrid() const;
 };

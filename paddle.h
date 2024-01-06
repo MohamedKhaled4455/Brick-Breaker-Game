@@ -15,5 +15,8 @@ public:
 	void draw(window* win);
 	void collisionAction() override;
 	void movement(window* win);
+	point getuprlft() const;
+	int getwidth() const;
+
 
 }; 

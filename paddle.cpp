@@ -69,3 +69,13 @@ void paddle::movement(window* win)
 		win->UpdateBuffer();
 	} while (1);
 }
+
+point paddle::getuprlft() const
+{
+	return uprLft;
+}
+
+int paddle::getwidth() const
+{
+	return width;
+}

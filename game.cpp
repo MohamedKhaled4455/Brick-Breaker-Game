@@ -111,6 +111,11 @@ window* game::getWind() const		//returns a pointer to the graphics window
 	return pWind;
 }
 
+paddle* game::getpaddle() const
+{
+	return ppaddle;
+}
+
 
 
 
