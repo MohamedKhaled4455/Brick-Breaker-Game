@@ -19,5 +19,6 @@
 		void hide_brick_Matrix(point p);
 		void hide_bricks_of_bombbrick(point p); // hide upper, lower, right, and left bricks around bombbrick
 		int addBrick(BrickType brkType, point clickedPoint);
+		brick*** getbrickmatrix();
 	};
 

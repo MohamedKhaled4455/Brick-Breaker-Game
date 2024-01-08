@@ -5,6 +5,7 @@
 #include "Bricks.h"
 #include "paddle.h"
 #include "ball.h"
+#include "Collectable.h"
 
 
 
@@ -32,6 +33,7 @@ class game
 	window* pWind;	//Pointer to the CMU graphics window
 	toolbar* gameToolbar;
 	grid* bricksGrid;
+	Collectable* pCollect;
 
 public:
 	game();
@@ -59,5 +61,7 @@ public:
 	paddle* getpaddle() const;
 
 	grid* getGrid() const;
+
+	ball* getball() const;
 };
 

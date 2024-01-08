@@ -16,6 +16,7 @@ public:
 	void collisionAction() override;
 	void setcollisionpoint(point c);
 	void BallPaddleReflection();
+	void BallBrickReflection(int i, int j);
 	void balldraw();
 	void emptyball();
 

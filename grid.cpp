@@ -61,11 +61,17 @@ void grid::hide_brick_Matrix(point p)
 {
 	int r = (p.y - uprLft.y) / config.brickHeight;
 	int c = p.x / config.brickWidth;
+	point uprlft_b =  brickMatrix[r][c]->getuprlft();
+	// get height and width of  a specific brick
+	int width_b = brickMatrix[r][c]->getwidth();
+	int height_b = brickMatrix[r][c]->getheight(); 
 
 	delete brickMatrix[r][c];// I want to put i and j of the brick
 	brickMatrix = nullptr;
 	// add draw rectangle >> insert its points
-	pGame->getWind()->DrawRectangle(uprLft.x, uprLft.y, (uprLft.x + width), (uprLft.y + height), FRAME);
+	pGame->getWind()->SetBrush(LAVENDER);
+	pGame->getWind()->SetPen(WHITE);
+	pGame->getWind()->DrawRectangle(uprlft_b.x, uprlft_b.y, (uprlft_b.x + width_b), (uprlft_b.y + height_b), FILLED);
 	
 }
 	
@@ -75,6 +81,30 @@ void grid::hide_bricks_of_bombbrick(point p)
 {
 	int r = (p.y - uprLft.y) / config.brickHeight;
 	int c = p.x / config.brickWidth;
+	// get all bricks uprlft points 
+	// right brick
+	point uprlft_R = brickMatrix[r + 1][c]->getuprlft();
+	//left brick
+	point uprlft_L = brickMatrix[r - 1][c]->getuprlft();
+	// upper brick
+	point uprlft_U = brickMatrix[r][c+1]->getuprlft();
+	// down brick
+	point uprlft_D = brickMatrix[r][c - 1]->getuprlft();
+
+	
+	// get height and width of all bricks
+	// right
+	int width_R = brickMatrix[r + 1][c]->getwidth();
+	int height_R = brickMatrix[r + 1][c]->getheight();
+	//left brick
+	int width_L = brickMatrix[r - 1][c]->getwidth();
+	int height_L = brickMatrix[r - 1][c]->getheight();
+// upper brick
+	int width_U = brickMatrix[r + 1][c + 1]->getwidth();
+	int height_U = brickMatrix[r + 1][c + 1]->getheight();
+// down brick
+	int width_D = brickMatrix[r + 1][c - 1]->getwidth();
+	int height_D = brickMatrix[r + 1][c - 1]->getheight();
 
 	delete brickMatrix[r+1][c];// right brick
 	delete brickMatrix[r-1][c];// left brick
@@ -83,6 +113,24 @@ void grid::hide_bricks_of_bombbrick(point p)
 
 	brickMatrix = nullptr;
 	// add draw rectangle >> insert its points 
+	// Right
+	pGame->getWind()->SetBrush(LAVENDER);
+	pGame->getWind()->SetPen(WHITE);
+	pGame->getWind()->DrawRectangle(uprlft_R.x, uprlft_R.y, (uprlft_R.x + width_R), (uprlft_R.y + height_R), FILLED);
+	// left
+	pGame->getWind()->SetBrush(LAVENDER);
+	pGame->getWind()->SetPen(WHITE);
+	pGame->getWind()->DrawRectangle(uprlft_L.x, uprlft_L.y, (uprlft_L.x + width_L), (uprlft_L.y + height_L), FILLED);
+	// upper
+	pGame->getWind()->SetBrush(LAVENDER);
+	pGame->getWind()->SetPen(WHITE);
+	pGame->getWind()->DrawRectangle(uprlft_U.x, uprlft_U.y, (uprlft_U.x + width_U), (uprlft_U.y + height_U), FILLED);
+	// down
+	pGame->getWind()->SetBrush(LAVENDER);
+	pGame->getWind()->SetPen(WHITE);
+	pGame->getWind()->DrawRectangle(uprlft_D.x, uprlft_D.y, (uprlft_D.x + width_D), (uprlft_D.y + height_D), FILLED);
+
+	
 }
 
 
@@ -117,4 +165,9 @@ int grid::addBrick(BrickType brkType, point clickedPoint)
 		// handle more types
 	}
 	return 1;
+}
+
+brick*** grid::getbrickmatrix()
+{
+	return brickMatrix;
 }
