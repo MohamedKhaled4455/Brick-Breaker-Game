@@ -72,6 +72,8 @@ toolbar::toolbar(point r_uprleft, int wdth, int hght, game* pG):
 	//	1- Create an object setting its upper left corner, width and height
 	iconsList[ICON_ADD_NORM] = new iconAddNormalBrick(p, config.iconWidth, height, pGame);
 	p.x+= config.iconWidth;
+	iconsList[ICON_DELETE_BRICK] = new iconDeleteBrick(p, config.iconWidth, height, pGame);
+	p.x += config.iconWidth;
 	iconsList[ICON_EXIT] = new iconExit(p, config.iconWidth, height, pGame);
 
 	//	2-Set its image (from the above images list)

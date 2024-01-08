@@ -192,6 +192,7 @@ void game::go() const
 					pball->setcollisionpoint(BallPaddleCollision.midpoint);
 					pball->collisionAction();
 				}
+
 				
 				// means call collisionaction in ball and make if statment or switch 
 				// to define that the collision is between ball and paddle or ball and brick

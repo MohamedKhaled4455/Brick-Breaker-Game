@@ -42,7 +42,7 @@ hardBrick::hardBrick(point r_uprleft, int r_width, int r_height, game* r_pGame) 
 	brick(r_uprleft, r_width, r_height, r_pGame)
 {
 	strength = 3;
-	imageName = "images\\bricks\\hardbrick.png";
+	imageName = "images\\bricks\\hardbrick.jpg";
 
 }
 
@@ -77,7 +77,7 @@ void hardBrick::collisionAction()
 bombBrick::bombBrick(point r_uprleft, int r_width, int r_height, game* r_pGame) :
 	brick(r_uprleft, r_width, r_height, r_pGame)
 {
-	imageName = "images\\bricks\\bombbrick.png";
+	imageName = "images\\bricks\\bombbrick.jpg";
 }
 
 void bombBrick::collisionAction()
@@ -99,7 +99,7 @@ void bombBrick::collisionAction()
 rockBrick::rockBrick(point r_uprleft, int r_width, int r_height, game* r_pGame):
 	brick(r_uprleft, r_width, r_height, r_pGame)
 {
-	imageName = "images\\bricks\\rockbrick.png";
+	imageName = "images\\bricks\\rockbrick.jpg";
 
 }
 
@@ -118,7 +118,7 @@ PowerUpDownbricks::PowerUpDownbricks(point r_uprleft, int r_width, int r_height,
 	brick(r_uprleft, r_width, r_height, r_pGame)
 
 {
-	imageName = "images\\bricks\\PowerUpDownbrick.png";
+	imageName = "images\\bricks\\PowerUpDownbrick.jpg";
 
 }
 
