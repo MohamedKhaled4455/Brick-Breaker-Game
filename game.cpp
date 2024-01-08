@@ -34,7 +34,7 @@ game::game()
 	paddleUprleft.y = 510;
 	ppaddle = new paddle(paddleUprleft, 160, 17, this);
 	// for showing the paddle draw function should be after movement function.
-	ppaddle->draw(pWind);
+	ppaddle->draw();
 
 
 	//5- Create the ball
@@ -185,6 +185,7 @@ void game::go() const
 			{
 
 				isExit = gameToolbar->handleClick(x, y);
+				ppaddle->movement();
 				pball->ballMovement();
 				// if check collision between ball and paddle true, do feature 20, 
 				collisionInfo BallPaddleCollision = checkCollision(ppaddle, pball);

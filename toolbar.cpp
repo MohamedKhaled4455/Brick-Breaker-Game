@@ -59,6 +59,7 @@ toolbar::toolbar(point r_uprleft, int wdth, int hght, game* pG):
 	//First prepare List of images for each icon
 	//To control the order of these images in the menu, reoder them in enum ICONS above	
 	iconsImages[ICON_ADD_NORM] = "images\\ToolbarIcons\\NormalBrickIcon.jpg";
+	iconsImages[ICON_POWER_UP_DOWN] = "images\\ToolbarIcons\\PowerUpDownbrickIcon.jpg";
 	iconsImages[ICON_DELETE_BRICK] = "images\\ToolbarIcons\\DeleteBrickIcon.jpg";
 	iconsImages[ICON_EXIT] = "images\\ToolbarIcons\\ExitIcon.jpg";
 
@@ -72,6 +73,8 @@ toolbar::toolbar(point r_uprleft, int wdth, int hght, game* pG):
 	//	1- Create an object setting its upper left corner, width and height
 	iconsList[ICON_ADD_NORM] = new iconAddNormalBrick(p, config.iconWidth, height, pGame);
 	p.x+= config.iconWidth;
+	iconsList[ICON_POWER_UP_DOWN] = new IconPowerUpDownbrick(p, config.iconWidth, height, pGame);
+	p.x += config.iconWidth;
 	iconsList[ICON_DELETE_BRICK] = new iconDeleteBrick(p, config.iconWidth, height, pGame);
 	p.x += config.iconWidth;
 	iconsList[ICON_EXIT] = new iconExit(p, config.iconWidth, height, pGame);
@@ -126,6 +129,28 @@ bool toolbar::handleClick(int x, int y)
 
 
 }
+////////////////////////////////////////////////////  class IconPowerUpDownbrick   //////////////////////////////////////////////
+IconPowerUpDownbrick::IconPowerUpDownbrick(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+	toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
+{
+}
+void IconPowerUpDownbrick::onClick()
+{
+	pGame->printMessage("Click on empty cells to add Power Bricks  ==> Right-Click to stop <==");
+	int x, y;
+	clicktype t = pGame->getMouseClick(x, y);
+	while (t == LEFT_CLICK)
+	{
+		point clicked;
+		clicked.x = x;
+		clicked.y = y;
+		grid* pGrid = pGame->getGrid();
+		pGrid->addBrick(BRK_POWER, clicked);
+		pGrid->draw();
+		t = pGame->getMouseClick(x, y);
+	}
+	pGame->printMessage("");
+}
 ////////////////////////////////////////////////////  class iconDeleteBrick   //////////////////////////////////////////////
 
 iconDeleteBrick::iconDeleteBrick(point r_uprleft, int r_width, int r_height, game* r_pGame) :
@@ -148,3 +173,5 @@ void iconDeleteBrick::onClick()
 	}
 	pGame->printMessage("");
 }
+
+

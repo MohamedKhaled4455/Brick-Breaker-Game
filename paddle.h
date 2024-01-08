@@ -12,9 +12,9 @@ public:
 	paddle(point uprleft, int w, int h, game* r_pGame);
 
 
-	void draw(window* win);
+	void draw();
 	void collisionAction() override;
-	void movement(window* win);
+	void movement();
 	point getuprlft() const;
 	int getwidth() const;
 

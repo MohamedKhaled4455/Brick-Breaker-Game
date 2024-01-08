@@ -64,9 +64,12 @@ void grid::hide_brick_Matrix(point p)
 
 	delete brickMatrix[r][c];// I want to put i and j of the brick
 	brickMatrix = nullptr;
-	// add draw rectangle >> insert its points 
+	// add draw rectangle >> insert its points
+	pGame->getWind()->DrawRectangle(uprLft.x, uprLft.y, (uprLft.x + width), (uprLft.y + height), FRAME);
 	
 }
+	
+
 
 void grid::hide_bricks_of_bombbrick(point p)
 {
@@ -105,6 +108,9 @@ int grid::addBrick(BrickType brkType, point clickedPoint)
 	{
 	case BRK_NRM:	//The new brick to add is Normal Brick
 		brickMatrix[gridCellRowIndex][gridCellColIndex] = new normalBrick(newBrickUpleft, config.brickWidth, config.brickHeight, pGame);
+		break;
+	case BRK_POWER:	//The new brick to add is Normal Brick
+		brickMatrix[gridCellRowIndex][gridCellColIndex] = new PowerUpDownbricks(newBrickUpleft, config.brickWidth, config.brickHeight, pGame);
 		break;
 
 		//TODO: 

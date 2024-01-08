@@ -19,6 +19,13 @@ public:
 	iconAddNormalBrick(point r_uprleft, int r_width, int r_height, game* r_pGame);
 	virtual void onClick();
 };
+////////////////////////////////////////////////////  class IconPowerUpDownbrick   //////////////////////////////////////////////
+class IconPowerUpDownbrick :public toolbarIcon
+{
+public:
+	IconPowerUpDownbrick(point r_uprleft, int r_width, int r_height, game* r_pGame);
+	virtual void onClick();
+};
 ////////////////////////////////////////////////////  class iconDeleteBrick   //////////////////////////////////////////////
 class iconDeleteBrick :public toolbarIcon
 {
@@ -46,6 +53,8 @@ class toolbar:public drawable
 		//Note: Icons are ordered here as they appear in menu
 		//If you want to change the menu icons order, change the order here
 		ICON_ADD_NORM,		//add normal brick
+
+		ICON_POWER_UP_DOWN, // powerup/down brick
 
 		//TODO: Add more icons names here
 		ICON_DELETE_BRICK,

@@ -9,7 +9,8 @@ enum BrickType	//add more brick types
 	BRK_NRM,	//Normal Brick
 	BRK_HRD,		//Hard Brick
 	BRK_BOM,         // Bomb brick
-	BRK_ROCK         // Rock brick
+	BRK_ROCK ,        // Rock brick
+	BRK_POWER           // powerup/down brick
 
 	//TODO: Add more types
 };
@@ -20,6 +21,7 @@ class brick :public collidable
 {
 public:
 	brick(point r_uprleft, int r_width, int r_height, game* r_pGame);
+	
 
 };
 
