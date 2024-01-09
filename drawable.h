@@ -24,4 +24,7 @@ public:
     drawable(point r_uprleft, int r_width, int r_height, game* r_pGame);
     virtual void draw() const;//for a drwable object to draw itself on the screen
     void setImageName(string path);
+    point getuprlft();
+    int getwidth();
+    int getheight();
 };

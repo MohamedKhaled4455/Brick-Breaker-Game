@@ -5,6 +5,7 @@
 #include "Bricks.h"
 #include "paddle.h"
 #include "ball.h"
+#include "Collectable.h"
 
 
 
@@ -25,19 +26,25 @@ class game
 	MODE gameMode;
 
 	/// Add more members if needed
-	
+
 
 	paddle* ppaddle; // Pointer to paddle
 	ball* pball;
 	window* pWind;	//Pointer to the CMU graphics window
 	toolbar* gameToolbar;
 	grid* bricksGrid;
+	Collectable* pCollect;
 
+	int score = 0;
+	int live = 3;
+	int seconds = 0;
 public:
 	game();
 	~game();
 
 	void setScore(int s);
+	void SetLive(int L);
+	void DrawScore_live_timer();
 
 	clicktype getMouseClick(int& x, int& y) const;//Get coordinate where user clicks and returns click type (left/right)
 	string getSrting() const;	 //Returns a string entered by the user
@@ -51,13 +58,15 @@ public:
 
 	void printMessage(string msg) const;	//Print a message on Status bar
 
-	void go() const;
+	void go();
 
-	void play() ; // to switch from design to play mode
+	void play(); // to switch from design to play mode
 
 	window* getWind() const;		//returns a pointer to the graphics window
-
+	paddle* getpaddle() const;
 
 	grid* getGrid() const;
+
+	ball* getball() const;
 };
 

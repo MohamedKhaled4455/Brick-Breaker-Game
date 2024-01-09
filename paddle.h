@@ -7,13 +7,20 @@
 class paddle : public collidable
 {
 private:
+	bool isPause = false;
 
 public:
 	paddle(point uprleft, int w, int h, game* r_pGame);
 
 
-	void draw(window* win);
+	void draw();
 	void collisionAction() override;
-	void movement(window* win);
+	void movement();
+	point getuprlft() const;
+	int getwidth() const;
+	void paddlepause();
+	bool getisPause(); const
+	void paddlecontinue();
+
 
 }; 

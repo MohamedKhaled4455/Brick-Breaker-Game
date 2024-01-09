@@ -8,6 +8,7 @@ d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fund
 d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fundamentals of computer programming\project\project main code\c---project\brick-breaker-game\debug\game.sbr
 d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fundamentals of computer programming\project\project main code\c---project\brick-breaker-game\debug\drawable.sbr
 d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fundamentals of computer programming\project\project main code\c---project\brick-breaker-game\debug\collidable.sbr
+d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fundamentals of computer programming\project\project main code\c---project\brick-breaker-game\debug\collectable.sbr
 d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fundamentals of computer programming\project\project main code\c---project\brick-breaker-game\debug\windowinput.sbr
 d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fundamentals of computer programming\project\project main code\c---project\brick-breaker-game\debug\mousequeue.sbr
 d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fundamentals of computer programming\project\project main code\c---project\brick-breaker-game\debug\keyqueue.sbr
@@ -24,6 +25,7 @@ d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fund
 d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fundamentals of computer programming\project\project main code\c---project\brick-breaker-game\debug\keyqueue.obj
 d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fundamentals of computer programming\project\project main code\c---project\brick-breaker-game\debug\mousequeue.obj
 d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fundamentals of computer programming\project\project main code\c---project\brick-breaker-game\debug\windowinput.obj
+d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fundamentals of computer programming\project\project main code\c---project\brick-breaker-game\debug\collectable.obj
 d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fundamentals of computer programming\project\project main code\c---project\brick-breaker-game\debug\collidable.obj
 d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fundamentals of computer programming\project\project main code\c---project\brick-breaker-game\debug\drawable.obj
 d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fundamentals of computer programming\project\project main code\c---project\brick-breaker-game\debug\game.obj
@@ -89,8 +91,8 @@ d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fund
 d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fundamentals of computer programming\project\project main code\c---project\brick-breaker-game\debug\jdcoefct.obj
 d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fundamentals of computer programming\project\project main code\c---project\brick-breaker-game\debug\jdcolor.obj
 d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fundamentals of computer programming\project\project main code\c---project\brick-breaker-game\debug\jddctmgr.obj
-d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fundamentals of computer programming\project\project main code\c---project\brick-breaker-game\debug\cie202-project.ilk
 d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fundamentals of computer programming\project\project main code\c---project\brick-breaker-game\debug\cie202-project.exe
+d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fundamentals of computer programming\project\project main code\c---project\brick-breaker-game\debug\cie202-project.ilk
 d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fundamentals of computer programming\project\project main code\c---project\brick-breaker-game\debug\cie202-project.pdb
 d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fundamentals of computer programming\project\project main code\c---project\brick-breaker-game\debug\cie202-project.tlog\bscmake.command.1.tlog
 d:\files\signed in backup\zweil city\courses\2nd year - semester 1\cie 202, fundamentals of computer programming\project\project main code\c---project\brick-breaker-game\debug\cie202-project.tlog\bscmake.read.1.tlog

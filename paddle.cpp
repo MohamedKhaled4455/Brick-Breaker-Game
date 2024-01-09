@@ -36,9 +36,9 @@ paddle::paddle(point r_uprleft, int r_width, int r_height, game* r_pGame) :
 //	width = w;
 //}
 
-void paddle::draw(window* win)
+void paddle::draw()
 {
- 
+	window* win = pGame->getWind();
 		win->SetBrush(CORNFLOWERBLUE);
 	win->SetPen(BLACK);
 	win->DrawRectangle(uprLft.x, uprLft.y, (uprLft.x + width), (uprLft.y + height), FILLED);
@@ -48,10 +48,12 @@ void paddle::collisionAction()
 {
 }
 
-void paddle::movement(window* win)
+void paddle::movement()
 {// paddle movement function that responsible for both the draw and the movement of the paddle
-	do {
-		paddle::draw(win);
+	window* win = pGame->getWind();
+
+	
+		paddle::draw();
 		char Key;
 		keytype ktype;
 		ktype = win->WaitKeyPress(Key);
@@ -67,5 +69,30 @@ void paddle::movement(window* win)
 		win->SetPen(LAVENDER);
 		win->DrawRectangle(0, uprLft.y, (1200), (uprLft.y + height), FILLED);
 		win->UpdateBuffer();
-	} while (1);
+	
+}
+
+point paddle::getuprlft() const
+{
+	return uprLft;
+}
+
+int paddle::getwidth() const
+{
+	return width;
+}
+
+void paddle::paddlepause()
+{
+	isPause = true;
+}
+
+bool paddle::getisPause()
+{
+	return isPause;
+}
+
+const void paddle::paddlecontinue()
+{
+	isPause = false;
 }
