@@ -210,7 +210,7 @@ void game::go()
 
 		}
 		if (gameMode == MODE_PLAY) {
-			while (gameMode == MODE_PLAY) {
+			
 				// if ball collides with any brick
 				brick*** brickMatrix = bricksGrid->getbrickmatrix();
 				int rows = bricksGrid->getheight() / config.brickHeight;
@@ -246,7 +246,7 @@ void game::go()
 							pball->BallBrickReflection(i, j);
 						}
 					}
-				}
+				
 
 
 
@@ -291,6 +291,7 @@ void game::play()
 	if (key == 32)
 	{
 		// move ball
+		go();
 		pball->ballMovementVertically();
 
 
