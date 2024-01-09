@@ -17,7 +17,7 @@ void ball::ballMovement()
 	pGame->getball()->uprLft.y += vecy;
 	pGame->getball()->uprLft.x += vecx;
 	balldraw();
-	win->UpdateBuffer();
+	//win->UpdateBuffer();
 
 
 
@@ -31,7 +31,7 @@ void ball::ballMovementVertically()
 	emptyball();
 	pGame->getball()->uprLft.y -= vecy;
 	balldraw();
-	win->UpdateBuffer();
+	//win->UpdateBuffer();
 
 }
 

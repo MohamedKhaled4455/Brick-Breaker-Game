@@ -61,13 +61,31 @@ game::~game()
 
 void game::setScore(int s)
 {
-	static int score = 0;
+
 	score += s;
+
+
+}
+
+void game::SetLive(int L)
+{
+	live = live + L;
+}
+
+
+
+void game::DrawScore_live_timer()
+{
+	clearStatusBar();	//First clear the status bar
+	// write score
 	pWind->SetPen(config.penColor, 50);
 	pWind->SetFont(24, BOLD, BY_NAME, "Arial");
-	pWind->DrawString(config.windWidth - config.windWidth * 0.193, config.windHeight - config.statusBarHeight + config.windWidth * 0.008, "Scocre: ");
-	pWind->DrawInteger(config.windWidth - config.windWidth * 0.13, config.windHeight - config.statusBarHeight + config.windWidth * 0.008, score);
-
+	pWind->DrawString(10, config.windHeight - (int)(0.85 * config.statusBarHeight), "Score: ");
+	pWind->DrawInteger(80, config.windHeight - (int)(0.85 * config.statusBarHeight), score);
+	//write live
+	pWind->DrawString(101, config.windHeight - (int)(0.85 * config.statusBarHeight), "| Live: ");
+	pWind->DrawInteger(165, config.windHeight - (int)(0.85 * config.statusBarHeight), live);
+	//write time counter
 }
 
 
@@ -157,7 +175,7 @@ ball* game::getball() const
 
 
 ////////////////////////////////////////////////////////////////////////
-void game::go() const
+void game::go()
 {
 	//This function reads the position where the user clicks to determine the desired operation
 	int x, y;
@@ -185,52 +203,51 @@ void game::go() const
 
 		}
 		if (gameMode == MODE_PLAY) {
+			while (gameMode == MODE_PLAY) {
+				// if ball collides with any brick
+				brick*** brickMatrix = bricksGrid->getbrickmatrix();
+				int rows = bricksGrid->getheight() / config.brickHeight;
+				int cols = bricksGrid->getwidth() / config.brickWidth;
+				
+				for (int i = 0; i < rows; i++) {
+					for (int j = 0; i < cols; j++) {
+						//checking everything in for loop of bricks, because it takes time
+						////////////////////////////////
+						
+						DrawScore_live_timer();
+						getMouseClick(x, y);
 
-			// if ball collides with any brick
-			brick*** brickMatrix = bricksGrid->getbrickmatrix();
-			int rows = bricksGrid->getheight() / config.brickHeight;
-			int cols = bricksGrid->getwidth() / config.brickWidth;
-
-			for (int i = 0; i < rows; i++) {
-				for (int j = 0; i < cols; j++) {
-					//checking everything in for loop of bricks, because it takes time
-					////////////////////////////////
-					isExit = gameToolbar->handleClick(x, y);
-					// paddle and ball movement 
-					if (ppaddle->getisPause() == false) {
-						ppaddle->movement();
-					}
-					if (pball->getisPause() == false) {
-						pball->ballMovement();
-					}
-					// if check collision between ball and paddle true, do feature 20, 
-					collisionInfo BallPaddleCollision = checkCollision(ppaddle, pball);
-					if (BallPaddleCollision.collided) {
-						pball->setcollisionpoint(BallPaddleCollision.midpoint);
-						pball->BallPaddleReflection();
-					}
-					//////////////////////////////////
-					//next part related to collison of bricks
-					collisionInfo BallBrickCollision = checkCollision(brickMatrix[i][j], pball);
-					if (BallBrickCollision.collided) {
-						pball->setcollisionpoint(BallBrickCollision.midpoint);
-						pball->BallBrickReflection(i, j);
+						isExit = gameToolbar->handleClick(x, y);
+						// paddle and ball movement 
+						if (ppaddle->getisPause() == false) {
+							ppaddle->movement();
+						}
+						if (pball->getisPause() == false) {
+							pball->ballMovement();
+						}
+						// if check collision between ball and paddle true, do feature 20, 
+						collisionInfo BallPaddleCollision = checkCollision(ppaddle, pball);
+						if (BallPaddleCollision.collided) {
+							pball->setcollisionpoint(BallPaddleCollision.midpoint);
+							pball->BallPaddleReflection();
+						}
+						//////////////////////////////////
+						//next part related to collison of bricks
+						collisionInfo BallBrickCollision = checkCollision(brickMatrix[i][j], pball);
+						if (BallBrickCollision.collided) {
+							pball->setcollisionpoint(BallBrickCollision.midpoint);
+							pball->BallBrickReflection(i, j);
+						}
 					}
 				}
+
+
+
+
 			}
 
-
-
-
-
-
 		}
-		getMouseClick(x, y);
-		if (y >= 0 && y < config.toolBarHeight)
-		{
-			isExit = gameToolbar->handleClick(x, y);
 
-		}
 
 
 	} while (!isExit);

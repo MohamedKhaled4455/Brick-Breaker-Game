@@ -35,11 +35,15 @@ class game
 	grid* bricksGrid;
 	Collectable* pCollect;
 
+	int score = 0;
+	int live = 3;
 public:
 	game();
 	~game();
 
 	void setScore(int s);
+	void SetLive(int L);
+	void DrawScore_live_timer();
 
 	clicktype getMouseClick(int& x, int& y) const;//Get coordinate where user clicks and returns click type (left/right)
 	string getSrting() const;	 //Returns a string entered by the user
@@ -53,7 +57,7 @@ public:
 
 	void printMessage(string msg) const;	//Print a message on Status bar
 
-	void go() const;
+	void go() ;
 
 	void play() ; // to switch from design to play mode
 
