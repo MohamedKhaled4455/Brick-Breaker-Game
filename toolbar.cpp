@@ -66,6 +66,12 @@ toolbar::toolbar(point r_uprleft, int wdth, int hght, game* pG):
 	iconsImages[ICON_SAVE] = "images\\ToolbarIcons\\SaveIcon.jpg";
 	iconsImages[ICON_LOAD] = "images\\ToolbarIcons\\LoadIcon.jpg";
 	iconsImages[ICON_DELETE_BRICK] = "images\\ToolbarIcons\\DeleteBrickIcon.jpg";
+
+	iconsImages[ICON_PLAY] = "images\\ToolbarIcons\\PlayIcon.jpg";
+	iconsImages[ICON_PAUSE] = "images\\ToolbarIcons\\PauseIcon.jpg";
+	iconsImages[ICON_CONTINUE] = "images\\ToolbarIcons\\ContinueIcon.jpg";
+	iconsImages[ICON_STOP] = "images\\ToolbarIcons\\StopIcon.jpg";
+
 	iconsImages[ICON_EXIT] = "images\\ToolbarIcons\\ExitIcon.jpg";
 
 	point p;
@@ -92,6 +98,16 @@ toolbar::toolbar(point r_uprleft, int wdth, int hght, game* pG):
 	p.x += config.iconWidth;
 	iconsList[ICON_DELETE_BRICK] = new iconDeleteBrick(p, config.iconWidth, height, pGame);
 	p.x += config.iconWidth;
+
+	iconsList[ICON_PLAY] = new iconPlay(p, config.iconWidth, height, pGame);
+	p.x += config.iconWidth;
+	iconsList[ICON_PAUSE] = new iconPause(p, config.iconWidth, height, pGame);
+	p.x += config.iconWidth;
+	iconsList[ICON_CONTINUE] = new iconContinue(p, config.iconWidth, height, pGame);
+	p.x += config.iconWidth;
+	iconsList[ICON_STOP] = new iconStop(p, config.iconWidth, height, pGame);
+	p.x += config.iconWidth;
+
 	iconsList[ICON_EXIT] = new iconExit(p, config.iconWidth, height, pGame);
 
 	//	2-Set its image (from the above images list)
@@ -281,4 +297,43 @@ void iconDeleteBrick::onClick()
 	}
 	pGame->printMessage("");
 }
+////////////////////////////////////////////////////  class iconPlay   //////////////////////////////////////////////
 
+iconPlay::iconPlay(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+	toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
+{
+}
+
+void iconPlay::onClick()
+{
+}
+////////////////////////////////////////////////////  class iconPause   //////////////////////////////////////////////
+
+iconPause::iconPause(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+	toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
+{
+}
+
+void iconPause::onClick()
+{
+}
+////////////////////////////////////////////////////  class iconContinue   //////////////////////////////////////////////
+
+iconContinue::iconContinue(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+	toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
+{
+}
+
+void iconContinue::onClick()
+{
+}
+////////////////////////////////////////////////////  class iconStop   //////////////////////////////////////////////
+
+iconStop::iconStop(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+	toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
+{
+}
+
+void iconStop::onClick()
+{
+}

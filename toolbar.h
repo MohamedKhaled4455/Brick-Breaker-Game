@@ -68,9 +68,34 @@ public:
 	iconDeleteBrick(point r_uprleft, int r_width, int r_height, game* r_pGame);
 	virtual void onClick();
 };
-
-
-
+////////////////////////////////////////////////////  class iconPlay   //////////////////////////////////////////////
+class iconPlay :public toolbarIcon
+{
+public:
+	iconPlay(point r_uprleft, int r_width, int r_height, game* r_pGame);
+	virtual void onClick();
+};
+////////////////////////////////////////////////////  class iconPause    //////////////////////////////////////////////
+class iconPause :public toolbarIcon
+{
+public:
+	iconPause(point r_uprleft, int r_width, int r_height, game* r_pGame);
+	virtual void onClick();
+};
+////////////////////////////////////////////////////  class iconContinue     //////////////////////////////////////////////
+class iconContinue :public toolbarIcon
+{
+public:
+	iconContinue(point r_uprleft, int r_width, int r_height, game* r_pGame);
+	virtual void onClick();
+};
+////////////////////////////////////////////////////  class iconStop    //////////////////////////////////////////////
+class iconStop :public toolbarIcon
+{
+public:
+	iconStop(point r_uprleft, int r_width, int r_height, game* r_pGame);
+	virtual void onClick();
+};
 ////////////////////////////////////////////////////  class iconExit   //////////////////////////////////////////////
 class iconExit :public toolbarIcon
 {
@@ -97,8 +122,12 @@ class toolbar:public drawable
 		ICON_ROCK,
 		ICON_SAVE,
 		ICON_LOAD,
-
 		ICON_DELETE_BRICK,
+
+		ICON_PLAY,
+		ICON_PAUSE,
+		ICON_CONTINUE,
+		ICON_STOP,
 
 		ICON_EXIT,		//Exit icon
 
