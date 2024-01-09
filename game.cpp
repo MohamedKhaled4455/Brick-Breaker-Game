@@ -1,6 +1,7 @@
 #include "game.h"
 #include "gameConfig.h"
-
+#include <chrono>
+#include <thread>
 
 
 game::game()
@@ -74,6 +75,10 @@ void game::SetLive(int L)
 
 
 
+
+
+
+
 void game::DrawScore_live_timer()
 {
 	clearStatusBar();	//First clear the status bar
@@ -86,6 +91,8 @@ void game::DrawScore_live_timer()
 	pWind->DrawString(101, config.windHeight - (int)(0.85 * config.statusBarHeight), "| Live: ");
 	pWind->DrawInteger(165, config.windHeight - (int)(0.85 * config.statusBarHeight), live);
 	//write time counter
+	pWind->DrawString(186, config.windHeight - (int)(0.85 * config.statusBarHeight), "| Time: ");
+	pWind->DrawInteger(260, config.windHeight - (int)(0.85 * config.statusBarHeight), seconds);
 }
 
 

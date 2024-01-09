@@ -21,17 +21,14 @@ normalBrick::normalBrick(point r_uprleft, int r_width, int r_height, game* r_pGa
 
 void normalBrick::collisionAction()
 {
-	bool checkcollision = true;// just for represnetation
-	//TODO: Add collision action logic
-	if (checkcollision == true) { // bool checkcollision is a reponse from checkcollision()
-		// update score
+	
 
 		pGame->setScore(1);
 
 		//hide the normal brick() 
 	    pGame->getGrid()->hide_brick_Matrix(uprLft);
 		
-	}
+	
 
 
 }
@@ -49,9 +46,9 @@ hardBrick::hardBrick(point r_uprleft, int r_width, int r_height, game* r_pGame) 
 void hardBrick::collisionAction()
 {
 
-	bool checkcollision = true;// just for represnetation
+	
 	//TODO: Add collision action logic
-	if (checkcollision == true) { // bool checkcollision is a reponse from checkcollision()
+	
 
 
 		strength--; // reduce strength by - 1 
@@ -70,7 +67,7 @@ void hardBrick::collisionAction()
 			pGame->getGrid()->hide_brick_Matrix(uprLft);
 
 		}
-	}
+	
 }
 
 ////////////////////////////////////////////////////  class bombBrick  /////////////////////////////////
@@ -83,16 +80,15 @@ bombBrick::bombBrick(point r_uprleft, int r_width, int r_height, game* r_pGame) 
 void bombBrick::collisionAction()
 {
 
-	bool checkcollision = true;// just for represnetation
-	//TODO: Add collision action logic
-	if (checkcollision == true) { // bool checkcollision is a reponse from checkcollision()
+	
+	
 		// hide bomb brick
 	    pGame->getGrid()->hide_brick_Matrix(uprLft);
 		// hide upper, lower, right, and left bricks
 		pGame->getGrid()->hide_bricks_of_bombbrick(uprLft);
 		//update score by +4
 		pGame->setScore(4);
-	}
+	
 }
 ////////////////////////////////////////////////////  class rockBrick  /////////////////////////////////
 
@@ -105,13 +101,30 @@ rockBrick::rockBrick(point r_uprleft, int r_width, int r_height, game* r_pGame):
 
 void rockBrick::collisionAction()
 {
-	bool checkcollision = true;// just for represnetation
-
+	
 	//TODO: Add collision action logic
-	if (checkcollision == true) { 
 	// nothing will happen, just normal reflection
-	}
+	
 }
+////////////////////////////////////////////////////  class LiveBrick  /////////////////////////////////
+LiveBrick::LiveBrick(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+	brick(r_uprleft, r_width, r_height, r_pGame)
+{
+	imageName = "images\\bricks\\LiveBrick.jpg";
+
+}
+
+void LiveBrick::collisionAction()
+{
+	// updatescore
+	pGame->setScore(1);
+	// increase live
+	pGame->SetLive(1); 
+	// hide brick
+	pGame->getGrid()->hide_brick_Matrix(uprLft);
+
+}
+
 ////////////////////////////////////////////////////  class PowerUpDownbricks  /////////////////////////////////
 
 PowerUpDownbricks::PowerUpDownbricks(point r_uprleft, int r_width, int r_height, game* r_pGame) :
@@ -124,14 +137,15 @@ PowerUpDownbricks::PowerUpDownbricks(point r_uprleft, int r_width, int r_height,
 
 void PowerUpDownbricks::collisionAction()
 {
-	bool checkcollision = true;// just for represnetation
+	
 
-	//TODO: Add collision action logic
-	if (checkcollision == true) {
+	   // updatescore
+	   pGame->setScore(1);
 		// through down one collectable vertically 
 		// hide brick
 		pGame->getGrid()->hide_brick_Matrix(uprLft);
 
 
-	}
+	
 }
+

@@ -47,6 +47,13 @@ public:
 	IconRockbrick(point r_uprleft, int r_width, int r_height, game* r_pGame);
 	virtual void onClick();
 };
+////////////////////////////////////////////////////  class IconLivebrick   //////////////////////////////////////////////
+class IconLivebrick :public toolbarIcon
+{
+public:
+	IconLivebrick(point r_uprleft, int r_width, int r_height, game* r_pGame);
+	virtual void onClick();
+};
 ////////////////////////////////////////////////////  class IconSave   //////////////////////////////////////////////
 class IconSave :public toolbarIcon
 {
@@ -120,6 +127,7 @@ class toolbar:public drawable
 		ICON_HARD,  
 		ICON_BOMB,
 		ICON_ROCK,
+		ICON_LIVE,
 		ICON_SAVE,
 		ICON_LOAD,
 		ICON_DELETE_BRICK,

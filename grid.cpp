@@ -169,6 +169,10 @@ int grid::addBrick(BrickType brkType, point clickedPoint)
 	case BRK_ROCK:
 		brickMatrix[gridCellRowIndex][gridCellColIndex] = new rockBrick(newBrickUpleft, config.brickWidth, config.brickHeight, pGame);
 		break;
+	case BRK_LIVE:
+		brickMatrix[gridCellRowIndex][gridCellColIndex] = new LiveBrick(newBrickUpleft, config.brickWidth, config.brickHeight, pGame);
+		break;
+
 
 		
 	}

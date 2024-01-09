@@ -63,6 +63,7 @@ toolbar::toolbar(point r_uprleft, int wdth, int hght, game* pG):
 	iconsImages[ICON_HARD] = "images\\ToolbarIcons\\HardBrickIcon.jpg";
 	iconsImages[ICON_BOMB] = "images\\ToolbarIcons\\bombbrickIcon.jpg";
 	iconsImages[ICON_ROCK] = "images\\ToolbarIcons\\rockbrickIcon.jpg";
+	iconsImages[ICON_LIVE] = "images\\ToolbarIcons\\LiveIcon.jpg";
 	iconsImages[ICON_SAVE] = "images\\ToolbarIcons\\SaveIcon.jpg";
 	iconsImages[ICON_LOAD] = "images\\ToolbarIcons\\LoadIcon.jpg";
 	iconsImages[ICON_DELETE_BRICK] = "images\\ToolbarIcons\\DeleteBrickIcon.jpg";
@@ -91,6 +92,8 @@ toolbar::toolbar(point r_uprleft, int wdth, int hght, game* pG):
 	iconsList[ICON_BOMB] = new IconBombbrick(p, config.iconWidth, height, pGame);
 	p.x += config.iconWidth;
 	iconsList[ICON_ROCK] = new IconRockbrick(p, config.iconWidth, height, pGame);
+	p.x += config.iconWidth;
+	iconsList[ICON_LIVE] = new IconLivebrick(p, config.iconWidth, height, pGame);
 	p.x += config.iconWidth;
 	iconsList[ICON_SAVE] = new IconSave(p, config.iconWidth, height, pGame);
 	p.x += config.iconWidth;
@@ -251,6 +254,31 @@ void IconRockbrick::onClick()
 	}
 	pGame->printMessage("");
 }
+////////////////////////////////////////////////////  class IconLivebrick   //////////////////////////////////////////////
+
+IconLivebrick::IconLivebrick(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+	toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
+{
+}
+
+void IconLivebrick::onClick()
+{
+	pGame->printMessage("Click on empty cells to add Live Bricks  ==> Right-Click to stop <==");
+	int x, y;
+	clicktype t = pGame->getMouseClick(x, y);
+	while (t == LEFT_CLICK)
+	{
+		point clicked;
+		clicked.x = x;
+		clicked.y = y;
+		grid* pGrid = pGame->getGrid();
+		pGrid->addBrick(BRK_LIVE, clicked);
+		pGrid->draw();
+		t = pGame->getMouseClick(x, y);
+	}
+	pGame->printMessage("");
+}
+
 ////////////////////////////////////////////////////  class IconSave   //////////////////////////////////////////////
 
 IconSave::IconSave(point r_uprleft, int r_width, int r_height, game* r_pGame) :
@@ -306,6 +334,7 @@ iconPlay::iconPlay(point r_uprleft, int r_width, int r_height, game* r_pGame) :
 
 void iconPlay::onClick()
 {
+	pGame->play();
 }
 ////////////////////////////////////////////////////  class iconPause   //////////////////////////////////////////////
 
@@ -351,3 +380,4 @@ void iconStop::onClick()
 	newgame.go();
 
 }
+

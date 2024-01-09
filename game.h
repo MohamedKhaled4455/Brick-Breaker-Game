@@ -26,8 +26,8 @@ class game
 	MODE gameMode;
 
 	/// Add more members if needed
-	
-	
+
+
 	paddle* ppaddle; // Pointer to paddle
 	ball* pball;
 	window* pWind;	//Pointer to the CMU graphics window
@@ -37,6 +37,7 @@ class game
 
 	int score = 0;
 	int live = 3;
+	int seconds = 0;
 public:
 	game();
 	~game();
@@ -57,9 +58,9 @@ public:
 
 	void printMessage(string msg) const;	//Print a message on Status bar
 
-	void go() ;
+	void go();
 
-	void play() ; // to switch from design to play mode
+	void play(); // to switch from design to play mode
 
 	window* getWind() const;		//returns a pointer to the graphics window
 	paddle* getpaddle() const;
