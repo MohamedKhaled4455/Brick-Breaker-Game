@@ -5,7 +5,8 @@
 #include "Bricks.h"
 #include "paddle.h"
 #include "ball.h"
-#include "grid.h"
+#include "Collectable.h"
+
 
 
 
@@ -15,6 +16,7 @@
 //Main class that coordinates the game operation
 class game
 {
+
 	enum MODE	//Game mode
 	{
 		MODE_DSIGN,	//Desing mode (startup mode)
@@ -24,18 +26,25 @@ class game
 	MODE gameMode;
 
 	/// Add more members if needed
-	brick br ;  // You have to add 4 arguments for a default constructor with 4 parameters
-	paddle Pa;  // You have to add 4 arguments for a default constructor with 4 parameters
-	ball ba;    // You have to add 4 arguments for a default constructor with 4 parameters
-	grid gr;    // You have to add 4 arguments for a default constructor with 4 parameters
 
+
+	paddle* ppaddle; // Pointer to paddle
+	ball* pball;
 	window* pWind;	//Pointer to the CMU graphics window
 	toolbar* gameToolbar;
 	grid* bricksGrid;
+	Collectable* pCollect;
 
+	int score = 0;
+	int live = 3;
+	int seconds = 0;
 public:
 	game();
 	~game();
+
+	void setScore(int s);
+	void SetLive(int L);
+	void DrawScore_live_timer();
 
 	clicktype getMouseClick(int& x, int& y) const;//Get coordinate where user clicks and returns click type (left/right)
 	string getSrting() const;	 //Returns a string entered by the user
@@ -49,12 +58,15 @@ public:
 
 	void printMessage(string msg) const;	//Print a message on Status bar
 
-	void go() const;
+	void go();
+
+	void play(); // to switch from design to play mode
 
 	window* getWind() const;		//returns a pointer to the graphics window
-
-
+	paddle* getpaddle() const;
 
 	grid* getGrid() const;
+
+	ball* getball() const;
 };
 

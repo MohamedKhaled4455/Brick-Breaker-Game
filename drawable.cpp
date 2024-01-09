@@ -21,6 +21,17 @@ void drawable::setImageName(string path)
 	imageName = path;
 }
 
+point drawable::getuprlft()
+{
+	return uprLft;
+}
 
+int drawable::getwidth()
+{
+	return width;
+}
 
-
+int drawable::getheight()
+{
+	return height;
+}
