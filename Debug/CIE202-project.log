@@ -1,3 +1,7 @@
 ﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  game.cpp
+  ball.cpp
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\ball.cpp(61,10): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\ball.cpp(66,10): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\ball.cpp(89,10): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\ball.cpp(94,10): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   CIE202-project.vcxproj -> D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\Debug\CIE202-project.exe

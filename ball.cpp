@@ -11,27 +11,23 @@ ball::ball(point r_uprleft, int r_width, int r_height, game* r_pGame) :
 void ball::ballMovement()
 {
 
-	window* win = pGame->getWind();
-
 	emptyball();
-	pGame->getball()->uprLft.y += vecy;
-	pGame->getball()->uprLft.x += vecx;
+	pGame->getball()->uprLft.y -= vecy;
+	pGame->getball()->uprLft.x -= vecx;
 	balldraw();
-	win->UpdateBuffer();
-
+	Pause(20);
 
 
 }
 
 void ball::ballMovementVertically()
 {
-
-	window* win = pGame->getWind();
-
 	emptyball();
 	pGame->getball()->uprLft.y -= vecy;
+	pGame->getball()->uprLft.x -= 0;
 	balldraw();
-	//win->UpdateBuffer();
+	Pause(20);
+
 
 }
 
