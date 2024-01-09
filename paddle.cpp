@@ -81,3 +81,18 @@ int paddle::getwidth() const
 {
 	return width;
 }
+
+void paddle::paddlepause()
+{
+	isPause = true;
+}
+
+bool paddle::getisPause()
+{
+	return isPause;
+}
+
+const void paddle::paddlecontinue()
+{
+	isPause = false;
+}

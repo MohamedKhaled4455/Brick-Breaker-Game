@@ -184,49 +184,53 @@ void game::go() const
 			}
 
 		}
-		 if (gameMode == MODE_PLAY) {
-			
-				// if ball collides with any brick
-				brick*** brickMatrix = bricksGrid->getbrickmatrix();
-				int rows = bricksGrid->getheight() / config.brickHeight;
-				int cols = bricksGrid->getwidth() / config.brickWidth;
+		if (gameMode == MODE_PLAY) {
 
-				for (int i = 0; i < rows; i++) {
-					for (int j = 0; i < cols; j++) {
-						//checking everything in for loop of bricks, because it takes time
-						////////////////////////////////
-						isExit = gameToolbar->handleClick(x, y);
-						// paddle and ball movement 
+			// if ball collides with any brick
+			brick*** brickMatrix = bricksGrid->getbrickmatrix();
+			int rows = bricksGrid->getheight() / config.brickHeight;
+			int cols = bricksGrid->getwidth() / config.brickWidth;
+
+			for (int i = 0; i < rows; i++) {
+				for (int j = 0; i < cols; j++) {
+					//checking everything in for loop of bricks, because it takes time
+					////////////////////////////////
+					isExit = gameToolbar->handleClick(x, y);
+					// paddle and ball movement 
+					if (ppaddle->getisPause() == false) {
 						ppaddle->movement();
+					}
+					if (pball->getisPause() == false) {
 						pball->ballMovement();
-						// if check collision between ball and paddle true, do feature 20, 
-						collisionInfo BallPaddleCollision = checkCollision(ppaddle, pball);
-						if (BallPaddleCollision.collided) {
-							pball->setcollisionpoint(BallPaddleCollision.midpoint);
-							pball->BallPaddleReflection();
-						}
-						//////////////////////////////////
-						//next part related to collison of bricks
-						collisionInfo BallBrickCollision = checkCollision(brickMatrix[i][j], pball);
-						if (BallBrickCollision.collided) {
-							pball->setcollisionpoint(BallBrickCollision.midpoint);
-							pball->BallBrickReflection(i, j);
-						}
+					}
+					// if check collision between ball and paddle true, do feature 20, 
+					collisionInfo BallPaddleCollision = checkCollision(ppaddle, pball);
+					if (BallPaddleCollision.collided) {
+						pball->setcollisionpoint(BallPaddleCollision.midpoint);
+						pball->BallPaddleReflection();
+					}
+					//////////////////////////////////
+					//next part related to collison of bricks
+					collisionInfo BallBrickCollision = checkCollision(brickMatrix[i][j], pball);
+					if (BallBrickCollision.collided) {
+						pball->setcollisionpoint(BallBrickCollision.midpoint);
+						pball->BallBrickReflection(i, j);
 					}
 				}
+			}
 
 
-			
+
 
 
 
 		}
-		 getMouseClick(x, y);
-		 if (y >= 0 && y < config.toolBarHeight)
-		 {
-			 isExit = gameToolbar->handleClick(x, y);
+		getMouseClick(x, y);
+		if (y >= 0 && y < config.toolBarHeight)
+		{
+			isExit = gameToolbar->handleClick(x, y);
 
-		 }
+		}
 
 
 	} while (!isExit);
@@ -264,7 +268,7 @@ void game::play()
 	{
 		// move ball
 		pball->ballMovementVertically();
-		
+
 
 	}
 }

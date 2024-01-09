@@ -316,6 +316,11 @@ iconPause::iconPause(point r_uprleft, int r_width, int r_height, game* r_pGame) 
 
 void iconPause::onClick()
 {
+	//ball stops
+	pGame->getball()->balpause();
+	//paddle stops
+	pGame->getpaddle()->paddlepause();
+	// timer pause counting
 }
 ////////////////////////////////////////////////////  class iconContinue   //////////////////////////////////////////////
 
@@ -326,6 +331,11 @@ iconContinue::iconContinue(point r_uprleft, int r_width, int r_height, game* r_p
 
 void iconContinue::onClick()
 {
+	// ball continue
+	pGame->getball()->ballcontinue();
+	// paddle continue moving
+	pGame->getpaddle()->paddlecontinue();
+	// timer continue counting
 }
 ////////////////////////////////////////////////////  class iconStop   //////////////////////////////////////////////
 
@@ -336,4 +346,8 @@ iconStop::iconStop(point r_uprleft, int r_width, int r_height, game* r_pGame) :
 
 void iconStop::onClick()
 {
+	pGame->~game();
+	game newgame;
+	newgame.go();
+
 }

@@ -7,6 +7,7 @@
 class paddle : public collidable
 {
 private:
+	bool isPause = false;
 
 public:
 	paddle(point uprleft, int w, int h, game* r_pGame);
@@ -17,6 +18,9 @@ public:
 	void movement();
 	point getuprlft() const;
 	int getwidth() const;
+	void paddlepause();
+	bool getisPause(); const
+	void paddlecontinue();
 
 
 }; 

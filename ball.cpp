@@ -117,3 +117,18 @@ void ball::emptyball()
 	win->SetBrush(LAVENDER);
 	win->DrawCircle(pGame->getball()->uprLft.x, pGame->getball()->uprLft.y, ballRadius, FILLED);
 }
+
+void ball::balpause()
+{
+	isPause = true;
+}
+
+bool ball::getisPause()
+{
+	return isPause;
+}
+
+void ball::ballcontinue()
+{
+	isPause = false;
+}

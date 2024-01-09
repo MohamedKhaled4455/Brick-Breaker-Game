@@ -1,13 +1,21 @@
 ﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
   toolbar.cpp
+  paddle.cpp
+  game.cpp
+  ball.cpp
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\game.cpp(68,108): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\game.cpp(68,37): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\game.cpp(69,108): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\game.cpp(69,38): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\ball.cpp(65,10): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\ball.cpp(70,10): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\ball.cpp(93,10): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\ball.cpp(98,10): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   Generating Code...
   Skipping... (no relevant changes detected)
-  paddle.cpp
   main.cpp
   grid.cpp
-  game.cpp
   drawable.cpp
-  ball.cpp
+  Collectable.cpp
   Bricks.cpp
-ball.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
   CIE202-project.vcxproj -> D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\Debug\CIE202-project.exe
