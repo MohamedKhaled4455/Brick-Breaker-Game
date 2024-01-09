@@ -157,12 +157,20 @@ int grid::addBrick(BrickType brkType, point clickedPoint)
 	case BRK_NRM:	//The new brick to add is Normal Brick
 		brickMatrix[gridCellRowIndex][gridCellColIndex] = new normalBrick(newBrickUpleft, config.brickWidth, config.brickHeight, pGame);
 		break;
-	case BRK_POWER:	//The new brick to add is Normal Brick
+	case BRK_POWER:	
 		brickMatrix[gridCellRowIndex][gridCellColIndex] = new PowerUpDownbricks(newBrickUpleft, config.brickWidth, config.brickHeight, pGame);
 		break;
+	case BRK_HRD:
+		brickMatrix[gridCellRowIndex][gridCellColIndex] = new hardBrick(newBrickUpleft, config.brickWidth, config.brickHeight, pGame);
+		break;
+	case BRK_BOM:
+		brickMatrix[gridCellRowIndex][gridCellColIndex] = new bombBrick(newBrickUpleft, config.brickWidth, config.brickHeight, pGame);
+		break;
+	case BRK_ROCK:
+		brickMatrix[gridCellRowIndex][gridCellColIndex] = new rockBrick(newBrickUpleft, config.brickWidth, config.brickHeight, pGame);
+		break;
 
-		//TODO: 
-		// handle more types
+		
 	}
 	return 1;
 }

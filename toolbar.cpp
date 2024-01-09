@@ -174,6 +174,20 @@ IconHardbrick::IconHardbrick(point r_uprleft, int r_width, int r_height, game* r
 }
 void IconHardbrick::onClick()
 {
+	pGame->printMessage("Click on empty cells to add Hard Bricks  ==> Right-Click to stop <==");
+	int x, y;
+	clicktype t = pGame->getMouseClick(x, y);
+	while (t == LEFT_CLICK)
+	{
+		point clicked;
+		clicked.x = x;
+		clicked.y = y;
+		grid* pGrid = pGame->getGrid();
+		pGrid->addBrick(BRK_HRD, clicked);
+		pGrid->draw();
+		t = pGame->getMouseClick(x, y);
+	}
+	pGame->printMessage("");
 }
 ////////////////////////////////////////////////////  class IconBombbrick   //////////////////////////////////////////////
 
@@ -183,6 +197,20 @@ IconBombbrick::IconBombbrick(point r_uprleft, int r_width, int r_height, game* r
 }
 void IconBombbrick::onClick()
 {
+	pGame->printMessage("Click on empty cells to add Bomb Bricks  ==> Right-Click to stop <==");
+	int x, y;
+	clicktype t = pGame->getMouseClick(x, y);
+	while (t == LEFT_CLICK)
+	{
+		point clicked;
+		clicked.x = x;
+		clicked.y = y;
+		grid* pGrid = pGame->getGrid();
+		pGrid->addBrick(BRK_BOM, clicked);
+		pGrid->draw();
+		t = pGame->getMouseClick(x, y);
+	}
+	pGame->printMessage("");
 }
 ////////////////////////////////////////////////////  class IconRockbrick   //////////////////////////////////////////////
 
@@ -192,6 +220,20 @@ IconRockbrick::IconRockbrick(point r_uprleft, int r_width, int r_height, game* r
 }
 void IconRockbrick::onClick()
 {
+	pGame->printMessage("Click on empty cells to add Rock Bricks  ==> Right-Click to stop <==");
+	int x, y;
+	clicktype t = pGame->getMouseClick(x, y);
+	while (t == LEFT_CLICK)
+	{
+		point clicked;
+		clicked.x = x;
+		clicked.y = y;
+		grid* pGrid = pGame->getGrid();
+		pGrid->addBrick(BRK_ROCK, clicked);
+		pGrid->draw();
+		t = pGame->getMouseClick(x, y);
+	}
+	pGame->printMessage("");
 }
 ////////////////////////////////////////////////////  class IconSave   //////////////////////////////////////////////
 
@@ -202,6 +244,8 @@ IconSave::IconSave(point r_uprleft, int r_width, int r_height, game* r_pGame) :
 
 void IconSave::onClick()
 {
+	
+	// to add save logic
 }
 ////////////////////////////////////////////////////  class IconLoad   //////////////////////////////////////////////
 
@@ -212,6 +256,7 @@ IconLoad::IconLoad(point r_uprleft, int r_width, int r_height, game* r_pGame) :
 
 void IconLoad::onClick()
 {
+	// to add load icon click logic
 }
 
 ////////////////////////////////////////////////////  class iconDeleteBrick   //////////////////////////////////////////////
