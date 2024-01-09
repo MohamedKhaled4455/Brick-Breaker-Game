@@ -1,5 +1,3 @@
 ﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  toolbar.cpp
-  main.cpp
-  Generating Code...
+  game.cpp
   CIE202-project.vcxproj -> D:\Files\Signed in backup\Zweil city\Courses\2nd year - semester 1\CIE 202, Fundamentals of Computer Programming\Project\Project main code\C---Project\brick-breaker-game\Debug\CIE202-project.exe

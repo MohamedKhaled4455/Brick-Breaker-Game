@@ -268,7 +268,7 @@ void game::play()
 
 
 	pWind->ChangeTitle("- - - - - - - - - - Brick Breaker (CIE202-project) - - - - - - - - - -");
-	printMessage("play now !");
+	printMessage("Enter Space to start");
 
 
 
