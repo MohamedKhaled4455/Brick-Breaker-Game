@@ -32,6 +32,7 @@ void ball::ballMovementVertically()
 	pGame->getball()->uprLft.y -= vecy;
 	balldraw();
 	win->UpdateBuffer();
+
 }
 
 void ball::collisionAction()

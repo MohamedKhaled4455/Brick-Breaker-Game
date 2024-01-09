@@ -184,11 +184,8 @@ void game::go() const
 			}
 
 		}
-		else if (gameMode == MODE_PLAY) {
-			getMouseClick(x, y);
-			if (y >= 0 && y < config.toolBarHeight)
-			{
-
+		 if (gameMode == MODE_PLAY) {
+			
 				// if ball collides with any brick
 				brick*** brickMatrix = bricksGrid->getbrickmatrix();
 				int rows = bricksGrid->getheight() / config.brickHeight;
@@ -219,11 +216,17 @@ void game::go() const
 				}
 
 
-			}
+			
 
 
 
 		}
+		 getMouseClick(x, y);
+		 if (y >= 0 && y < config.toolBarHeight)
+		 {
+			 isExit = gameToolbar->handleClick(x, y);
+
+		 }
 
 
 	} while (!isExit);
