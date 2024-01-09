@@ -63,8 +63,8 @@ toolbar::toolbar(point r_uprleft, int wdth, int hght, game* pG):
 	iconsImages[ICON_HARD] = "images\\ToolbarIcons\\HardBrickIcon.jpg";
 	iconsImages[ICON_BOMB] = "images\\ToolbarIcons\\bombbrickIcon.jpg";
 	iconsImages[ICON_ROCK] = "images\\ToolbarIcons\\rockbrickIcon.jpg";
-	iconsImages[ICON_SAVE] = "images\\ToolbarIcons\\rockbrickIcon.jpg";
-
+	iconsImages[ICON_SAVE] = "images\\ToolbarIcons\\SaveIcon.jpg";
+	iconsImages[ICON_LOAD] = "images\\ToolbarIcons\\LoadIcon.jpg";
 	iconsImages[ICON_DELETE_BRICK] = "images\\ToolbarIcons\\DeleteBrickIcon.jpg";
 	iconsImages[ICON_EXIT] = "images\\ToolbarIcons\\ExitIcon.jpg";
 
@@ -79,6 +79,16 @@ toolbar::toolbar(point r_uprleft, int wdth, int hght, game* pG):
 	iconsList[ICON_ADD_NORM] = new iconAddNormalBrick(p, config.iconWidth, height, pGame);
 	p.x+= config.iconWidth;
 	iconsList[ICON_POWER_UP_DOWN] = new IconPowerUpDownbrick(p, config.iconWidth, height, pGame);
+	p.x += config.iconWidth;
+	iconsList[ICON_HARD] = new IconHardbrick(p, config.iconWidth, height, pGame);
+	p.x += config.iconWidth;
+	iconsList[ICON_BOMB] = new IconBombbrick(p, config.iconWidth, height, pGame);
+	p.x += config.iconWidth;
+	iconsList[ICON_ROCK] = new IconRockbrick(p, config.iconWidth, height, pGame);
+	p.x += config.iconWidth;
+	iconsList[ICON_SAVE] = new IconSave(p, config.iconWidth, height, pGame);
+	p.x += config.iconWidth;
+	iconsList[ICON_LOAD] = new IconLoad(p, config.iconWidth, height, pGame);
 	p.x += config.iconWidth;
 	iconsList[ICON_DELETE_BRICK] = new iconDeleteBrick(p, config.iconWidth, height, pGame);
 	p.x += config.iconWidth;
