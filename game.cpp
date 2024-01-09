@@ -1,7 +1,5 @@
 #include "game.h"
 #include "gameConfig.h"
-#include <chrono>
-#include <thread>
 
 
 game::game()
@@ -28,27 +26,31 @@ game::game()
 	bricksGrid = new grid(gridUpperleft, config.windWidth, config.gridHeight, this);
 	bricksGrid->draw();
 
+
+
 	//4- Create the Paddle
 	//TODO: Add code to create and draw the paddle
 	point paddleUprleft;
 	paddleUprleft.x = 525;
 	paddleUprleft.y = 510;
-	ppaddle = new paddle(paddleUprleft, 160, 17, this);
+	ppaddle = new paddle(paddleUprleft, 150, 20, this);
 	// for showing the paddle draw function should be after movement function.
-	ppaddle->draw();
 
+	/*ppaddle->movement(pWind);*/
 
 	//5- Create the ball
 	//TODO: Add code to create and draw the ball
 	point ballUprleft;
-	ballUprleft.x = paddleUprleft.x + 160 / 2;
-	ballUprleft.y = paddleUprleft.y - 17 / 2;
-	pball = new ball(ballUprleft, 160, 17, this);
-	pball->balldraw();
+	ballUprleft.x = paddleUprleft.x + 16502;
+	ballUprleft.y = paddleUprleft.y - 20 / 2;
+	pball = new ball(ballUprleft, 150, 20, this);
+
+	
+
+
+
 	//6- Create and clear the status bar
 	clearStatusBar();
-
-
 }
 
 game::~game()
@@ -58,41 +60,7 @@ game::~game()
 	delete bricksGrid;
 	delete ppaddle;
 	delete pball;
-}
-
-void game::setScore(int s)
-{
-
-	score += s;
-
-
-}
-
-void game::SetLive(int L)
-{
-	live = live + L;
-}
-
-
-
-
-
-
-
-void game::DrawScore_live_timer()
-{
-	clearStatusBar();	//First clear the status bar
-	// write score
-	pWind->SetPen(config.penColor, 50);
-	pWind->SetFont(24, BOLD, BY_NAME, "Arial");
-	pWind->DrawString(10, config.windHeight - (int)(0.85 * config.statusBarHeight), "Score: ");
-	pWind->DrawInteger(80, config.windHeight - (int)(0.85 * config.statusBarHeight), score);
-	//write live
-	pWind->DrawString(101, config.windHeight - (int)(0.85 * config.statusBarHeight), "| Live: ");
-	pWind->DrawInteger(165, config.windHeight - (int)(0.85 * config.statusBarHeight), live);
-	//write time counter
-	pWind->DrawString(186, config.windHeight - (int)(0.85 * config.statusBarHeight), "| Time: ");
-	pWind->DrawInteger(260, config.windHeight - (int)(0.85 * config.statusBarHeight), seconds);
+	delete pcollect;
 }
 
 
@@ -136,11 +104,6 @@ window* game::getWind() const		//returns a pointer to the graphics window
 	return pWind;
 }
 
-paddle* game::getpaddle() const
-{
-	return ppaddle;
-}
-
 
 
 
@@ -152,6 +115,7 @@ string game::getSrting() const
 	pWind->FlushKeyQueue();
 	while (1)
 	{
+
 		ktype = pWind->WaitKeyPress(Key);
 		if (ktype == ESCAPE)	//ESCAPE key is pressed
 			return "";	//returns nothing as user has cancelled label
@@ -165,6 +129,7 @@ string game::getSrting() const
 		else
 			Label += Key;
 		printMessage(Label);
+
 	}
 }
 
@@ -173,138 +138,67 @@ grid* game::getGrid() const
 	// TODO: Add your implementation code here.
 	return bricksGrid;
 }
-
-ball* game::getball() const
+// added on 8/1 by mohammed ali 
+paddle* game::getpaddle() const
+{
+	return ppaddle;
+}
+ball* game::getBall() const
 {
 	return pball;
 }
+collectable* game::getCollectable() const
+{
+	return pcollect;
+}
+void game::checkBallFall()
+{
+	if (pball->getYPosition() >= pWind->GetHeight() - (pball->getYPosition() + 10))
+	{
+		lifes--;
+		pball->setresetposition();
+		if (lifes == 0)
+		{
+			pWind->DrawRectangle(0, 0, pWind->GetWidth(), pWind->GetHeight(), FILLED);
+			printMessage("game over");
+		}
+	}
+}
+//perform collectable action if the paddle collided with colectable object
+
+
 
 
 
 ////////////////////////////////////////////////////////////////////////
-void game::go()
+void game::go() const
 {
 	//This function reads the position where the user clicks to determine the desired operation
 	int x, y;
 	bool isExit = false;
-	
+	char key;
+	//Change the title
+	pWind->ChangeTitle("- - - - - - - - - - Brick Breaker (CIE202-project) - - - - - - - - - -");
+
 	//Change the title
 	pWind->ChangeTitle("- - - - - - - - - - Brick Breaker (CIE202-project) - - - - - - - - - -");
 
 	do
 	{
-
-
-
-		//Get the coordinates of the user click
-		if (gameMode == MODE_DSIGN)		//Game is in the Desgin mode
+		printMessage("Ready...");
+		if (gameMode == MODE_DSIGN)
 		{
-			printMessage("Ready...");
-			getMouseClick(x, y);
-			//[1] If user clicks on the Toolbar
-			if (y >= 0 && y < config.toolBarHeight)
+			if (pWind->GetMouseClick(x, y) && y >= 0 && y < config.toolBarHeight)
 			{
 				isExit = gameToolbar->handleClick(x, y);
-
-
 			}
-
+			else {
+				ppaddle->movement();
+			}
+			
 		}
-		if (gameMode == MODE_PLAY) {
-
-
-			
-			//pball->ballMovementVertically();
-			ppaddle->movement();
-			DrawScore_live_timer();
-		}
-				//playerPaddle->paddleMove();
-			
-
-			//while (gameMode == MODE_PLAY) {
-			//	// if ball collides with any brick
-			//	brick*** brickMatrix = bricksGrid->getbrickmatrix();
-			//	int rows = bricksGrid->getheight() / config.brickHeight;
-			//	int cols = bricksGrid->getwidth() / config.brickWidth;
-			//	
-			//	for (int i = 0; i < rows; i++) {
-			//		for (int j = 0; i < cols; j++) {
-			//			//checking everything in for loop of bricks, because it takes time
-			//			////////////////////////////////
-			//			
-			//			getMouseClick(x, y);
-
-			//			isExit = gameToolbar->handleClick(x, y);
-			//			// paddle and ball movement 
-			//			if (ppaddle->getisPause() == false) {
-			//				ppaddle->movement();
-			//			}
-			//			if (pball->getisPause() == false) {
-			//				pball->ballMovement();
-			//			}
-			//			// if check collision between ball and paddle true, do feature 20, 
-			//			collisionInfo BallPaddleCollision = checkCollision(ppaddle, pball);
-			//			if (BallPaddleCollision.collided) {
-			//				pball->setcollisionpoint(BallPaddleCollision.midpoint);
-			//				pball->BallPaddleReflection();
-			//			}
-			//			//////////////////////////////////
-			//			//next part related to collison of bricks
-			//			collisionInfo BallBrickCollision = checkCollision(brickMatrix[i][j], pball);
-			//			if (BallBrickCollision.collided) {
-			//				pball->setcollisionpoint(BallBrickCollision.midpoint);
-			//				pball->BallBrickReflection(i, j);
-			//			}
-			//		}
-			//	}
-
-
-
-
-			
-
 		
-
-
 
 	} while (!isExit);
 }
-//////////////////////////////////////////////////////////////////////////////////////////////////
-// if play icon clicked, call play
-void game::play()
-{
 
-	gameMode = MODE_PLAY;
-
-
-	pWind->ChangeTitle("- - - - - - - - - - Brick Breaker (CIE202-project) - - - - - - - - - -");
-	printMessage("Enter Space to start");
-
-
-
-	//// hide bricks icon and their action 
-	//gameToolbar->~toolbar();
-	//delete gameToolbar;
-	//gameToolbar = nullptr;
-	//
-	////2 - create and draw the toolbar
-	//point toolbarUpperleft;
-	//toolbarUpperleft.x = 0;
-	//toolbarUpperleft.y = 0;
-
-	//gameToolbar = new toolbar(toolbarUpperleft, 0, config.toolBarHeight, this, true);
-	//gameToolbar->draw();
-	 //when space is clicked, move ball
-	char key;
-	keytype ktype;
-	ktype = pWind->WaitKeyPress(key);
-	if (key == 32)
-	{
-		// move ball
-		go();
-		
-		
-
-
-	}
-}

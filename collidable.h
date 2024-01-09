@@ -1,6 +1,7 @@
 #pragma once
 #include "drawable.h"
 
+
 //================================================================================================
  ///////////////////////////////////////////////////////////////////////////////////////////////
  //define a struct containing collision information
@@ -23,3 +24,6 @@ public:
         point midpoint;// point of collition
     };
 };
+
+
+

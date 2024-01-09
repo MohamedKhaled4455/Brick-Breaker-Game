@@ -121,15 +121,11 @@
     <ClCompile Include="collidable.cpp">
       <Filter>Base Classes</Filter>
     </ClCompile>
-    <ClCompile Include="ball.cpp">
-      <Filter>Ball Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="paddle.cpp">
-      <Filter>Paddle Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="Collectable.cpp">
-      <Filter>Collectable</Filter>
-    </ClCompile>
+    <ClCompile Include="paddle.cpp" />
+    <ClCompile Include="ball.cpp" />
+    <ClCompile Include="collectable.cpp" />
+    <ClCompile Include="powerupdown.cpp" />
+    <ClCompile Include="wall.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h">
@@ -207,15 +203,11 @@
     <ClInclude Include="collidable.h">
       <Filter>Base Classes</Filter>
     </ClInclude>
-    <ClInclude Include="ball.h">
-      <Filter>Ball Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="paddle.h">
-      <Filter>Paddle Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="Collectable.h">
-      <Filter>Collectable</Filter>
-    </ClInclude>
+    <ClInclude Include="paddle.h" />
+    <ClInclude Include="ball.h" />
+    <ClInclude Include="collectable.h" />
+    <ClInclude Include="powerupdown.h" />
+    <ClInclude Include="wall.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base Classes">
@@ -230,18 +222,8 @@
     <Filter Include="Bricks Classes">
       <UniqueIdentifier>{5e150dff-8a89-44f3-b58a-731df9cea925}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Ball Classes">
-      <UniqueIdentifier>{605942b4-232b-457b-8eed-80bb2506ecc0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Paddle Classes">
-      <UniqueIdentifier>{35f77f74-b1e8-4de6-b022-7ed2cac2ee8d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Collectable">
-      <UniqueIdentifier>{6797fc55-cf14-40cf-b150-b9b45445b4e3}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
 </Project>
