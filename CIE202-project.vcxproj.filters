@@ -127,9 +127,11 @@
     <ClCompile Include="paddle.cpp">
       <Filter>Paddle Classes</Filter>
     </ClCompile>
-    <ClCompile Include="Collectable.cpp">
-      <Filter>Collectable</Filter>
+    <ClCompile Include="collectable.cpp">
+      <Filter>collectable</Filter>
     </ClCompile>
+    <ClCompile Include="powerupdown.cpp" />
+    <ClCompile Include="wall.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h">
@@ -213,9 +215,11 @@
     <ClInclude Include="paddle.h">
       <Filter>Paddle Classes</Filter>
     </ClInclude>
-    <ClInclude Include="Collectable.h">
-      <Filter>Collectable</Filter>
+    <ClInclude Include="collectable.h">
+      <Filter>collectable</Filter>
     </ClInclude>
+    <ClInclude Include="powerupdown.h" />
+    <ClInclude Include="wall.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base Classes">
@@ -236,7 +240,7 @@
     <Filter Include="Paddle Classes">
       <UniqueIdentifier>{35f77f74-b1e8-4de6-b022-7ed2cac2ee8d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Collectable">
+    <Filter Include="collectable">
       <UniqueIdentifier>{6797fc55-cf14-40cf-b150-b9b45445b4e3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>

@@ -33,7 +33,7 @@ class game
 	window* pWind;	//Pointer to the CMU graphics window
 	toolbar* gameToolbar;
 	grid* bricksGrid;
-	Collectable* pCollect;
+	collectable* pcollect;
 
 	int score = 0;
 	int live = 3;
@@ -58,7 +58,7 @@ public:
 
 	void printMessage(string msg) const;	//Print a message on Status bar
 
-	void go();
+	void go() const;
 
 	void play(); // to switch from design to play mode
 
@@ -68,5 +68,9 @@ public:
 	grid* getGrid() const;
 
 	ball* getball() const;
+	collectable* getCollectable() const;
+
+	//Additional
+	void game::checkBallFall();
 };
 

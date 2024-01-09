@@ -2,46 +2,18 @@
 #include "game.h"
 #include "CMUgraphicsLib\auxil.h"	// where Pause is found
 paddle::paddle(point r_uprleft, int r_width, int r_height, game* r_pGame) :
-	collidable(r_uprleft, r_width, r_height, r_pGame) {}
+	collidable(r_uprleft, r_width, r_height, r_pGame) {
+	speed = 15;
+}
 
-// getters functions
 
-//point paddle::getpaddleP()
-//{
-//	return uprLft ;
-//}
-//
-//int paddle::getpaddlehight()
-//{
-//	return height;
-//}
-//int paddle::getpaddlewidth()
-//{
-//	return width;
-//}
-//
-//void paddle::setpaddleP(int xp, int yp)
-//{
-//	uprLft.x = xp;
-//	uprLft.y = yp;
-//}
-//
-//// setters functions
-//void paddle::setpaddlehight(int h)
-//{
-//	height = h;
-//}
-//void paddle::setpaddlewidth(int w)
-//{
-//	width = w;
-//}
 
 void paddle::draw()
 {
 	window* win = pGame->getWind();
 		win->SetBrush(CORNFLOWERBLUE);
 	win->SetPen(BLACK);
-	win->DrawRectangle(uprLft.x, uprLft.y, (uprLft.x + width), (uprLft.y + height), FILLED);
+	win->DrawRectangle(pGame->getpaddle()->uprLft.x, pGame->getpaddle()->uprLft.y, (pGame->getpaddle()->uprLft.x + width), (pGame->getpaddle()->uprLft.y + height), FILLED);
 }
 
 void paddle::collisionAction()
@@ -70,6 +42,26 @@ void paddle::movement()
 		win->DrawRectangle(0, uprLft.y, (1200), (uprLft.y + height), FILLED);
 		win->UpdateBuffer();
 	
+}
+void paddle::setspeed(int newspeed)
+{
+	speed = newspeed;
+}
+int paddle::getspeed()
+{
+	return speed;
+}
+void paddle::setX(int x)
+{
+	uprLft.x = x;
+}
+int paddle::getX()
+{
+	return uprLft.x;
+}
+void paddle::setWidth(int w)
+{
+	width = w;
 }
 
 point paddle::getuprlft() const

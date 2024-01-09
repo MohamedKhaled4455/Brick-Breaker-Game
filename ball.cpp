@@ -4,7 +4,10 @@
 #include "CMUgraphicsLib\auxil.h"	// where Pause is found
 
 ball::ball(point r_uprleft, int r_width, int r_height, game* r_pGame) :
-	collidable(r_uprleft, r_width, r_height, r_pGame) {}
+	collidable(r_uprleft, r_width, r_height, r_pGame) {
+	xreset = uprLft.x;
+	yreset = uprLft.y;
+}
 
 
 
@@ -95,7 +98,18 @@ void ball::BallBrickReflection(int i,int j)
 	}
 
 }
+void ball::BallWallReflection()
+{
+	// Check collision with left and right boundaries and perform reflection
+	if (collision.x <= 0 + ballRadius || collision.x >= pGame->getWind()->GetWidth() - ballRadius) {
+		vecx = -vecx; // Reflect horizontally on left or right collision
+	}
 
+	// Check collision with top boundary and perform reflection
+	if (collision.y <= 0 + ballRadius) {
+		vecy = -vecy;
+	}
+}
 
 void ball::balldraw()
 {
@@ -113,7 +127,24 @@ void ball::emptyball()
 	win->SetBrush(LAVENDER);
 	win->DrawCircle(pGame->getball()->uprLft.x, pGame->getball()->uprLft.y, ballRadius, FILLED);
 }
+int ball::getYPosition()
+{
+	return uprLft.y - ballRadius;
+}
 
+int ball::getXPosition()
+{
+	return uprLft.x - ballRadius;
+}
+int ball::setresetposition()
+{
+	uprLft.x = xreset;
+	uprLft.y = yreset;
+}
+int ball::getraduis()
+{
+	return ballRadius;
+}
 void ball::balpause()
 {
 	isPause = true;

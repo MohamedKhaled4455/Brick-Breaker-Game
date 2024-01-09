@@ -58,6 +58,8 @@ game::~game()
 	delete bricksGrid;
 	delete ppaddle;
 	delete pball;
+	delete pcollect;
+
 }
 
 void game::setScore(int s)
@@ -179,10 +181,29 @@ ball* game::getball() const
 	return pball;
 }
 
+collectable* game::getCollectable() const
+{
+	return pcollect;
+}
+
+void game::checkBallFall()
+{
+	if (pball->getYPosition() >= pWind->GetHeight() - (pball->getYPosition() + 10))
+	{
+		live--;
+		pball->setresetposition();
+		if (live == 0)
+		{
+			pWind->DrawRectangle(0, 0, pWind->GetWidth(), pWind->GetHeight(), FILLED);
+			printMessage("game over");
+		}
+	}
+}
+
 
 
 ////////////////////////////////////////////////////////////////////////
-void game::go()
+void game::go() const
 {
 	//This function reads the position where the user clicks to determine the desired operation
 	int x, y;
@@ -220,7 +241,7 @@ void game::go()
 					for (int j = 0; i < cols; j++) {
 						//checking everything in for loop of bricks, because it takes time
 						////////////////////////////////
-						
+
 						DrawScore_live_timer();
 						getMouseClick(x, y);
 
@@ -246,12 +267,13 @@ void game::go()
 							pball->BallBrickReflection(i, j);
 						}
 					}
-				
 
 
 
 
-			}
+
+				}
+			
 
 		}
 

@@ -8,6 +8,7 @@ class paddle : public collidable
 {
 private:
 	bool isPause = false;
+	int speed;
 
 public:
 	paddle(point uprleft, int w, int h, game* r_pGame);
@@ -16,6 +17,11 @@ public:
 	void draw();
 	void collisionAction() override;
 	void movement();
+	void setspeed(int newspeed);
+	int getspeed();
+	void setX(int x);
+	int getX();
+	void setWidth(int w);
 	point getuprlft() const;
 	int getwidth() const;
 	void paddlepause();

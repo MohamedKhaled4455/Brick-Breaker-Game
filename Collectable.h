@@ -1,13 +1,13 @@
 #pragma once
 #include "collidable.h"
 
-class Collectable : public collidable
+class collectable : public collidable
 {
 
 public:
-	Collectable(point uprleft, int w, int h, game* r_pGame);
+	collectable(point uprleft, int w, int h, game* r_pGame);
 	void collisionAction() override;
-	void move_collectable();
+	collectable* getCollectable();
 	void applyEffect();
 };
 

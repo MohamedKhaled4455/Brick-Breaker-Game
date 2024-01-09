@@ -57,4 +57,3 @@ void power::NarrowPaddle()
 	pad->setX(oldX - decValue);
 }
 
-//

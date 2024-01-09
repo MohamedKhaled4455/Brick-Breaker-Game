@@ -1,20 +1,24 @@
 #include "Collectable.h"
 #include "paddle.h"
 
-Collectable::Collectable(point uprleft, int w, int h, game* r_pGame) :
+collectable::collectable(point uprleft, int w, int h, game* r_pGame) :
 	collidable(uprleft, width, height, pGame) {}
 
-void Collectable::collisionAction()
+void collectable::collisionAction()
 {
-	move_collectable();
+	applyEffect();
 }
 
-void Collectable::move_collectable()
+collectable* collectable::getCollectable()
 {
+	return this;
+}
+
+void collectable::applyEffect()
+{
+
 }
 
 
-void Collectable::applyEffect()
-{
 
-}
+//default constructor for collictable objects
