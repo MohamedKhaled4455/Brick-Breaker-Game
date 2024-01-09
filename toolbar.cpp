@@ -60,6 +60,11 @@ toolbar::toolbar(point r_uprleft, int wdth, int hght, game* pG):
 	//To control the order of these images in the menu, reoder them in enum ICONS above	
 	iconsImages[ICON_ADD_NORM] = "images\\ToolbarIcons\\NormalBrickIcon.jpg";
 	iconsImages[ICON_POWER_UP_DOWN] = "images\\ToolbarIcons\\PowerUpDownbrickIcon.jpg";
+	iconsImages[ICON_HARD] = "images\\ToolbarIcons\\HardBrickIcon.jpg";
+	iconsImages[ICON_BOMB] = "images\\ToolbarIcons\\bombbrickIcon.jpg";
+	iconsImages[ICON_ROCK] = "images\\ToolbarIcons\\rockbrickIcon.jpg";
+	iconsImages[ICON_SAVE] = "images\\ToolbarIcons\\rockbrickIcon.jpg";
+
 	iconsImages[ICON_DELETE_BRICK] = "images\\ToolbarIcons\\DeleteBrickIcon.jpg";
 	iconsImages[ICON_EXIT] = "images\\ToolbarIcons\\ExitIcon.jpg";
 
@@ -151,6 +156,54 @@ void IconPowerUpDownbrick::onClick()
 	}
 	pGame->printMessage("");
 }
+////////////////////////////////////////////////////  class IconHardbrick   //////////////////////////////////////////////
+
+IconHardbrick::IconHardbrick(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+	toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
+{
+}
+void IconHardbrick::onClick()
+{
+}
+////////////////////////////////////////////////////  class IconBombbrick   //////////////////////////////////////////////
+
+IconBombbrick::IconBombbrick(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+	toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
+{
+}
+void IconBombbrick::onClick()
+{
+}
+////////////////////////////////////////////////////  class IconRockbrick   //////////////////////////////////////////////
+
+IconRockbrick::IconRockbrick(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+	toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
+{
+}
+void IconRockbrick::onClick()
+{
+}
+////////////////////////////////////////////////////  class IconSave   //////////////////////////////////////////////
+
+IconSave::IconSave(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+	toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
+{
+}
+
+void IconSave::onClick()
+{
+}
+////////////////////////////////////////////////////  class IconLoad   //////////////////////////////////////////////
+
+IconLoad::IconLoad(point r_uprleft, int r_width, int r_height, game* r_pGame) :
+	toolbarIcon(r_uprleft, r_width, r_height, r_pGame)
+{
+}
+
+void IconLoad::onClick()
+{
+}
+
 ////////////////////////////////////////////////////  class iconDeleteBrick   //////////////////////////////////////////////
 
 iconDeleteBrick::iconDeleteBrick(point r_uprleft, int r_width, int r_height, game* r_pGame) :
@@ -173,5 +226,4 @@ void iconDeleteBrick::onClick()
 	}
 	pGame->printMessage("");
 }
-
 

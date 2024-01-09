@@ -26,6 +26,41 @@ public:
 	IconPowerUpDownbrick(point r_uprleft, int r_width, int r_height, game* r_pGame);
 	virtual void onClick();
 };
+////////////////////////////////////////////////////  class IconHardbrick   //////////////////////////////////////////////
+class IconHardbrick :public toolbarIcon
+{
+public:
+	IconHardbrick(point r_uprleft, int r_width, int r_height, game* r_pGame);
+	virtual void onClick();
+};
+////////////////////////////////////////////////////  class IconBombbrick   //////////////////////////////////////////////
+class IconBombbrick :public toolbarIcon
+{
+public:
+	IconBombbrick(point r_uprleft, int r_width, int r_height, game* r_pGame);
+	virtual void onClick();
+};
+////////////////////////////////////////////////////  class IconRockbrick   //////////////////////////////////////////////
+class IconRockbrick :public toolbarIcon
+{
+public:
+	IconRockbrick(point r_uprleft, int r_width, int r_height, game* r_pGame);
+	virtual void onClick();
+};
+////////////////////////////////////////////////////  class IconSave   //////////////////////////////////////////////
+class IconSave :public toolbarIcon
+{
+public:
+	IconSave(point r_uprleft, int r_width, int r_height, game* r_pGame);
+	virtual void onClick();
+};
+////////////////////////////////////////////////////  class IconLoad   //////////////////////////////////////////////
+class IconLoad :public toolbarIcon
+{
+public:
+	IconLoad(point r_uprleft, int r_width, int r_height, game* r_pGame);
+	virtual void onClick();
+};
 ////////////////////////////////////////////////////  class iconDeleteBrick   //////////////////////////////////////////////
 class iconDeleteBrick :public toolbarIcon
 {
@@ -57,6 +92,12 @@ class toolbar:public drawable
 		ICON_POWER_UP_DOWN, // powerup/down brick
 
 		//TODO: Add more icons names here
+		ICON_HARD,  
+		ICON_BOMB,
+		ICON_ROCK,
+		ICON_SAVE,
+		ICON_LOAD,
+
 		ICON_DELETE_BRICK,
 
 		ICON_EXIT,		//Exit icon
