@@ -130,7 +130,6 @@
     <ClCompile Include="collectable.cpp">
       <Filter>collectable</Filter>
     </ClCompile>
-    <ClCompile Include="powerupdown.cpp" />
     <ClCompile Include="wall.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -218,7 +217,6 @@
     <ClInclude Include="collectable.h">
       <Filter>collectable</Filter>
     </ClInclude>
-    <ClInclude Include="powerupdown.h" />
     <ClInclude Include="wall.h" />
   </ItemGroup>
   <ItemGroup>

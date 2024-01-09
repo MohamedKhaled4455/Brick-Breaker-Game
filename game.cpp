@@ -1,7 +1,6 @@
 #include "game.h"
 #include "gameConfig.h"
-#include <chrono>
-#include <thread>
+
 
 
 game::game()
@@ -208,6 +207,7 @@ void game::go() const
 	//This function reads the position where the user clicks to determine the desired operation
 	int x, y;
 	bool isExit = false;
+	char c;
 	//Change the title
 	pWind->ChangeTitle("- - - - - - - - - - Brick Breaker (CIE202-project) - - - - - - - - - -");
 
@@ -231,56 +231,70 @@ void game::go() const
 
 		}
 		if (gameMode == MODE_PLAY) {
-			
-				// if ball collides with any brick
-				brick*** brickMatrix = bricksGrid->getbrickmatrix();
-				int rows = bricksGrid->getheight() / config.brickHeight;
-				int cols = bricksGrid->getwidth() / config.brickWidth;
-				
-				for (int i = 0; i < rows; i++) {
-					for (int j = 0; i < cols; j++) {
-						//checking everything in for loop of bricks, because it takes time
-						////////////////////////////////
-
-						DrawScore_live_timer();
-						getMouseClick(x, y);
-
-						isExit = gameToolbar->handleClick(x, y);
-						// paddle and ball movement 
-						if (ppaddle->getisPause() == false) {
-							ppaddle->movement();
-						}
-						if (pball->getisPause() == false) {
-							pball->ballMovement();
-						}
-						// if check collision between ball and paddle true, do feature 20, 
-						collisionInfo BallPaddleCollision = checkCollision(ppaddle, pball);
-						if (BallPaddleCollision.collided) {
-							pball->setcollisionpoint(BallPaddleCollision.midpoint);
-							pball->BallPaddleReflection();
-						}
-						//////////////////////////////////
-						//next part related to collison of bricks
-						collisionInfo BallBrickCollision = checkCollision(brickMatrix[i][j], pball);
-						if (BallBrickCollision.collided) {
-							pball->setcollisionpoint(BallBrickCollision.midpoint);
-							pball->BallBrickReflection(i, j);
-						}
-					}
-
-
-
-
-
-				}
-			
-
+			if (ppaddle->getisPause() == false) {
+				ppaddle->movement();
+			}
+			if (pball->getisPause() == false) {
+				pball->ballMovement();
+			}
 		}
+		//	char key;
+		//	keytype ktype;
+		//	
+		//	if (key == 32) {
+		//		do {
+		//			pWind->GetMouseClick(x, y);
+		//			ktype = pWind->GetKeyPress(key);
+		//			//[1] If user clicks on the Toolbar
+		//			if (y >= 0 && y < config.toolBarHeight)
+		//			{
+		//				isExit = gameToolbar->handleClick(x, y);
+
+		//			}
+		//			// if ball collides with any brick
+		//			brick*** brickMatrix = bricksGrid->getbrickmatrix();
+		//			int rows = bricksGrid->getheight() / config.brickHeight;
+		//			int cols = bricksGrid->getwidth() / config.brickWidth;
+		//			for (int i = 0; i < rows; i++) {
+		//				for (int j = 0; i < cols; j++) {
+		//					//DrawScore_live_timer();
+		//					// paddle and ball movement 
+		//					if (ppaddle->getisPause() == false) {
+		//						ppaddle->movement();
+		//					}
+		//					if (pball->getisPause() == false) {
+		//						pball->ballMovement();
+		//					}
+		//					// if check collision between ball and paddle true, do feature 20, 
+		//					collisionInfo BallPaddleCollision = checkCollision(ppaddle, pball);
+		//					if (BallPaddleCollision.collided) {
+		//						pball->setcollisionpoint(BallPaddleCollision.midpoint);
+		//						pball->BallPaddleReflection();
+		//					}
+		//					//////////////////////////////////
+		//					//next part related to collison of bricks
+		//					collisionInfo BallBrickCollision = checkCollision(brickMatrix[i][j], pball);
+		//					if (BallBrickCollision.collided) {
+		//						pball->setcollisionpoint(BallBrickCollision.midpoint);
+		//						pball->BallBrickReflection(i, j);
+		//					}
+		//					/////////////////////////////////
+		//					// check collision between paddle and collectable
+		//					collisionInfo PaddleCollectableCollision = checkCollision(ppaddle, pcollect);
+		//					if (PaddleCollectableCollision.collided) {
+		//						pcollect->doRandomAction();
+		//					}
+		//				}
+		//			}
+		//		} while (live != 0);
+		//	}
+
+		//}
+		} while (!isExit);
+
+	}
 
 
-
-	} while (!isExit);
-}
 //////////////////////////////////////////////////////////////////////////////////////////////////
 // if play icon clicked, call play
 void game::play()
@@ -307,15 +321,15 @@ void game::play()
 	//gameToolbar = new toolbar(toolbarUpperleft, 0, config.toolBarHeight, this, true);
 	//gameToolbar->draw();
 	 //when space is clicked, move ball
-	char key;
-	keytype ktype;
-	ktype = pWind->WaitKeyPress(key);
-	if (key == 32)
-	{
-		// move ball
-		go();
-		pball->ballMovementVertically();
+	go();
+	//char key;
+	//keytype ktype;
+	//ktype = pWind->WaitKeyPress(key);
+	//if (key == 32)
+	//{
+	//	// move ball
+	//	pball->ballMovementVertically();
 
 
-	}
+	//}
 }

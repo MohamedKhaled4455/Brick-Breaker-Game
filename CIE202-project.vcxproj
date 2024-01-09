@@ -172,7 +172,6 @@
     <ClCompile Include="grid.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="paddle.cpp" />
-    <ClCompile Include="powerupdown.cpp" />
     <ClCompile Include="toolbar.cpp" />
     <ClCompile Include="wall.cpp" />
   </ItemGroup>
@@ -206,7 +205,6 @@
     <ClInclude Include="gameConfig.h" />
     <ClInclude Include="grid.h" />
     <ClInclude Include="paddle.h" />
-    <ClInclude Include="powerupdown.h" />
     <ClInclude Include="toolbar.h" />
     <ClInclude Include="wall.h" />
   </ItemGroup>

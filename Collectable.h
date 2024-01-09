@@ -8,12 +8,10 @@ public:
 	collectable(point uprleft, int w, int h, game* r_pGame);
 	void collisionAction() override;
 	collectable* getCollectable();
-	void applyEffect();
+	void doRandomAction();
+	void WindGlid();
+	void ReverseDirection();
+	void QuickSand();
+	void WidePaddle();
+	void NarrowPaddle();
 };
-
-
-
-
-
-
-

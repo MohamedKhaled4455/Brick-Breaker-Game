@@ -23,7 +23,7 @@ public:
 	int getX();
 	void setWidth(int w);
 	point getuprlft() const;
-	int getwidth() const;
+	int getWidth() const;
 	void paddlepause();
 	bool getisPause(); const
 	void paddlecontinue();

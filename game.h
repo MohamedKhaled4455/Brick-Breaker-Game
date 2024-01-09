@@ -5,7 +5,7 @@
 #include "Bricks.h"
 #include "paddle.h"
 #include "ball.h"
-#include "Collectable.h"
+#include "collectable.h"
 
 
 
@@ -59,6 +59,7 @@ public:
 	void printMessage(string msg) const;	//Print a message on Status bar
 
 	void go() const;
+	
 
 	void play(); // to switch from design to play mode
 

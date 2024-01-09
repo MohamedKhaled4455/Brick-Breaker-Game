@@ -142,6 +142,7 @@ void PowerUpDownbricks::collisionAction()
 	   // updatescore
 	   pGame->setScore(1);
 		// through down one collectable vertically 
+	   
 		// hide brick
 		pGame->getGrid()->hide_brick_Matrix(uprLft);
 

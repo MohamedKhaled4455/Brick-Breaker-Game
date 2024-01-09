@@ -69,7 +69,7 @@ point paddle::getuprlft() const
 	return uprLft;
 }
 
-int paddle::getwidth() const
+int paddle::getWidth() const
 {
 	return width;
 }

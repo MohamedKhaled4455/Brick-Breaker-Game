@@ -136,7 +136,7 @@ int ball::getXPosition()
 {
 	return uprLft.x - ballRadius;
 }
-int ball::setresetposition()
+void ball::setresetposition()
 {
 	uprLft.x = xreset;
 	uprLft.y = yreset;

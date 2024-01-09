@@ -29,7 +29,7 @@ public:
 	// getters & setters 
 	int getYPosition();
 	int getXPosition();
-	int setresetposition();
+	void setresetposition();
 	int getraduis();
 
 };
